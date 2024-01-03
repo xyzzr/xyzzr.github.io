@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder</title>
+</head>
+<body>
+    <h1>Base64 Encoder</h1>
+    <label for="inputText">Input Text:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea><br>
+
+    <button onclick="encodeText()">Encode to Base64</button><br>
+
+    <label for="outputText">Base64 Output:</label>
+    <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+
+    <script>
+        function encodeText() {
+            var inputText = document.getElementById("inputText").value;
+            var encodedText = btoa(inputText);
+            document.getElementById("outputText").value = encodedText;
+        }
+    </script>
+</body>
+</html>
