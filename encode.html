@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base64 Encoder</title>
+    <title>Snowfall & Base64 Encoder</title>
     <style>
         body {
             display: flex;
@@ -13,10 +13,9 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        h1 {
-            margin-bottom: 20px;
+            background-color: black;
+            color: white;
+            overflow: hidden;
         }
 
         label {
@@ -27,9 +26,111 @@
             width: 100%;
             margin-top: 5px;
         }
+
+        .headline {
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            user-select: none;
+            transition: font-size 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .headline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            z-index: -1;
+            filter: blur(5px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .snowball {
+            position: absolute;
+            background-color: #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 1;
+            animation: floatLeft 10s linear forwards;
+            opacity: 0;
+        }
+
+        @keyframes floatLeft {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(-50vw);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <script>
+        let snowballCount = 0;
+        const textOptions = ["Go get a life", "diarrhea", "fart", "diarhea2"];
+
+        function createSnowball() {
+            if (snowballCount < 5) {
+                const snowball = document.createElement('div');
+                snowball.className = 'snowball';
+                snowball.style.left = Math.random() * window.innerWidth + 'px';
+                document.body.appendChild(snowball);
+                snowballCount++;
+            } else {
+                const snowballs = document.querySelectorAll('.snowball');
+                if (snowballs.length > 0) {
+                    snowballs[0].remove();
+                    snowballCount--;
+                }
+            }
+        }
+
+        function createSnowfall() {
+            setInterval(createSnowball, 2000);
+        }
+
+        function updateHeadline() {
+            const randomIndex = Math.floor(Math.random() * textOptions.length);
+            const newHeadline = textOptions[randomIndex];
+            const headlineElement = document.querySelector('.headline');
+            headlineElement.style.transition = 'opacity 0.5s ease-out';
+            headlineElement.style.opacity = 0;
+            setTimeout(() => {
+                headlineElement.textContent = newHeadline;
+                headlineElement.style.transition = 'opacity 0.5s ease-in';
+                headlineElement.style.opacity = 1;
+            }, 500);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createSnowfall();
+            updateHeadline();
+            setInterval(updateHeadline, 10000);
+        });
+    </script>
+    
+    <div class="headline">Go get a life</div>
+
     <h1>Base64 Encoder</h1>
     <label for="inputText">Input Text:</label>
     <textarea id="inputText" rows="4" cols="50"></textarea>
