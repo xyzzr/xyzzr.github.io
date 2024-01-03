@@ -4,13 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base64 Encoder</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        textarea, button {
+            width: 100%;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1>Base64 Encoder</h1>
     <label for="inputText">Input Text:</label>
-    <textarea id="inputText" rows="4" cols="50"></textarea><br>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
 
-    <button onclick="encodeText()">Encode to Base64</button><br>
+    <button onclick="encodeText()">Encode to Base64</button>
 
     <label for="outputText">Base64 Output:</label>
     <textarea id="outputText" rows="4" cols="50" readonly></textarea>
