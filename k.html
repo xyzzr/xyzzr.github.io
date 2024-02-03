@@ -11,31 +11,3 @@
     <meta content="https://pvhak.github.io/jammin.png" name="twitter:image" property="og:image">
     <meta content="summary" name="twitter:card">
     <script defer data-domain="pvhak.github.io/" src="https://a.erisly.moe/js/script.js"></script>
-    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-    <script>
-
-            const response = await fetch('FaIIenKingdom.github.io/main.mp4').catch(e);
-            const reader = response.body.getReader();
-            const contentLength = +response.headers.get('Content-Length');
-            let receivedLength = 0;
-            let chunks = [];
-            while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-                chunks.push(value);
-                receivedLength += value.length;
-                loadingProgress.textContent = Math.floor(receivedLength / contentLength * 95);
-            }
-
-            video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
-            video.load();
-        }
-    </script>
-
-        #video {
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
