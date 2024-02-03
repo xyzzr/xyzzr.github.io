@@ -1,9 +1,41 @@
-<!DOCTYPE html>
-<html lang="en"> <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>king</title>
-    <link rel="icon" href="https://github.com/FaIIenKingdom/FaIIenKingdom.github.io/assets/110189904/507bf64b-6838-4454-8e9b-a1cf87d2d0fc" type="image/x-icon"> </head> <body>
-     <video autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;">
-    <source src="https://github.com/FaIIenKingdom/FaIIenKingdom.github.io/assets/110189904/e5744d95-47d3-4653-8659-d919d3797975" type="video/mp4">
-</video>
+<html>
+<head>
+    <title>We are Jammin'</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="A funny clip from Captain Underpants. They are jammin!"
+        name="description">
+    <meta content="website" property="og:type">
+    <meta content="We Are Jammin'" name="twitter:title" property="og:title">
+    <meta content="A funny clip from Captain Underpants. They are jammin!"
+        name="twitter:description" property="og:description">
+    <meta content="https://pvhak.github.io/jammin.png" name="twitter:image" property="og:image">
+    <meta content="summary" name="twitter:card">
+    <script defer data-domain="pvhak.github.io/" src="https://a.erisly.moe/js/script.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>
+
+            const response = await fetch('FaIIenKingdom.github.io/main.mp4').catch(e);
+            const reader = response.body.getReader();
+            const contentLength = +response.headers.get('Content-Length');
+            let receivedLength = 0;
+            let chunks = [];
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+                chunks.push(value);
+                receivedLength += value.length;
+                loadingProgress.textContent = Math.floor(receivedLength / contentLength * 95);
+            }
+
+            video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
+            video.load();
+        }
+    </script>
+
+        #video {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
