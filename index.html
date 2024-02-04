@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- I had diarhea while coding this-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,59 +13,17 @@
   <meta content="summary" name="twitter:card">
   <script defer src="https://a.erisly.moe/js/script.js"></script>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background-color: #000;
-      transition: background-color 2s ease;
-    }
-
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    #startButton {
-      position: fixed;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      font-size: 24px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #startButton:hover {
-      background-color: #333;
-    }
+    body { margin: 0; overflow: hidden; background-color: #000; transition: background-color 2s ease; }
+    video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+    #startButton { position: fixed; top: 70%; left: 50%; transform: translate(-50%, -50%); padding: 20px; font-size: 24px; background-color: #000; color: #fff; border: none; cursor: pointer; transition: background-color 0.3s ease; }
+    #startButton:hover { background-color: #333; }
   </style>
 </head>
 <body>
   <button id="startButton" onclick="startVideo()">Click to begin experience</button>
-  <video id="backgroundVideo" loop>
-    <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
-  </video>
+  <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
-    function startVideo() {
-      var button = document.getElementById('startButton');
-      var video = document.getElementById('backgroundVideo');
-      if (!video.dataset.started) {
-        button.style.opacity = 0;
-        document.body.style.backgroundColor = '#fff';
-        setTimeout(() => button.style.display = 'none', 2000);
-        video.play();
-        video.dataset.started = true;
-      }
-    }
+    const startVideo = () => { const b = document.getElementById('startButton'), v = document.getElementById('backgroundVideo'); if (!v.dataset.started) { b.style.opacity = 0; document.body.style.backgroundColor = '#fff'; setTimeout(() => b.style.display = 'none', 2000); v.play(); v.dataset.started = true; } };
   </script>
 </body>
-</html>
+</html> <!--  sorry not sorry if its hard to read lol -->
