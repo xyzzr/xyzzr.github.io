@@ -30,7 +30,7 @@
       z-index: -1;
     }
 
-    #startButton, #farttext {
+    #startButton {
       position: fixed;
       top: 0;
       left: 0;
@@ -50,10 +50,13 @@
     }
 
     #farttext {
+      position: fixed;
       top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 14px;
+      color: #fff;
+      animation: glow 2s infinite alternate;
     }
 
     @keyframes glow {
@@ -94,6 +97,7 @@
   <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
     let snowballCount = 0;
+    let snowfallInterval;
 
     function createSnowball() {
       if (snowballCount < 5) {
@@ -112,7 +116,7 @@
     }
 
     function createSnowfall() {
-      setInterval(createSnowball, 2000);
+      snowfallInterval = setInterval(createSnowball, 2000);
     }
 
     const startVideo = () => {
@@ -130,8 +134,10 @@
         }, 2000);
         video.play();
         video.dataset.started = true;
+        clearInterval(snowfallInterval); // Stop snowfall
       }
     };
+
     document.addEventListener('DOMContentLoaded', createSnowfall);
   </script>
 </body>
