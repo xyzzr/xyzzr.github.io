@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kingdom</title>
   <link rel="icon" href="https://xyzzr.github.io/icon.png" type="image/x-icon">
   <meta content="Fallen Kingdom video" name="description">
@@ -13,80 +13,16 @@
   <meta content="summary" name="twitter:card">
   <script defer src="https://a.erisly.moe/js/script.js"></script>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background-color: #000;
-      transition: background-color 2s ease;
-    }
-
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    #startButton {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      font-size: 24px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      animation: glow 2s infinite alternate;
-    }
-
-    #farttext {
-      position: fixed;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 14px;
-      color: #fff;
-      animation: glow 2s infinite alternate;
-    }
-
+    body { margin: 0; overflow: hidden; background-color: #000; transition: background-color 2s ease; }
+    video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+    #startButton { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 20px; font-size: 24px; background-color: #000; color: #fff; border: none; cursor: pointer; transition: background-color 0.3s ease; animation: glow 2s infinite alternate; }
+    #farttext { position: fixed; top: 80%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; color: #fff; animation: glow 2s infinite alternate; }
     @keyframes glow {
       from {
         text-shadow: 0 0 10px #fff;
       }
       to {
         text-shadow: 0 0 20px #f00;
-      }
-    }
-
-    .snowball {
-      position: absolute;
-      background-color: #fff;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      z-index: 1;
-      animation: floatLeft 10s linear forwards;
-      opacity: 0;
-    }
-
-    @keyframes floatLeft {
-      0% {
-        transform: translateY(-100vh) translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) translateX(-50vw);
-        opacity: 0;
       }
     }
   </style>
@@ -96,34 +32,12 @@
   <p id="farttext">(made by clear)</p>
   <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
-    let snowballCount = 0;
-    let snowfallInterval;
-
-    function createSnowball() {
-      if (snowballCount < 5) {
-        const snowball = document.createElement('div');
-        snowball.className = 'snowball';
-        snowball.style.left = Math.random() * window.innerWidth + 'px';
-        document.body.appendChild(snowball);
-        snowballCount++;
-      } else {
-        const snowballs = document.querySelectorAll('.snowball');
-        if (snowballs.length > 0) {
-          snowballs[0].remove();
-          snowballCount--;
-        }
-      }
-    }
-
-    function createSnowfall() {
-      snowfallInterval = setInterval(createSnowball, 2000);
-    }
-
     const startVideo = () => {
       const button = document.getElementById('startButton');
+      const video = document.getElementById('backgroundVideo');
       const farttext = document.getElementById('farttext');
 
-      if (!button.dataset.clicked) {
+      if (!video.dataset.started) {
         button.style.opacity = 0;
         farttext.style.display = 'none';
         document.body.style.backgroundColor = '#fff';
@@ -131,12 +45,10 @@
           button.style.display = 'none';
           farttext.style.display = 'block';
         }, 2000);
-        button.dataset.clicked = true;
-        clearInterval(snowfallInterval);
+        video.play();
+        video.dataset.started = true;
       }
     };
-
-    document.addEventListener('DOMContentLoaded', createSnowfall);
   </script>
 </body>
 </html>
