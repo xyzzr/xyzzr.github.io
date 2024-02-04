@@ -1,13 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Kingdom</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="Fallen Kingdom video"
-name="description">
-<meta content="website" property="og:type">
-<meta content=Kingdom" name="twitter:title" property="og:title">
-<meta content="Fallen Kingdom video"
-name="twitter:description" property="og:description">
-<meta content="https://xyzzr.github.io/icon.png" name="twitter:image" property="og:image">
-<meta content="summary" name="twitter:card">
-<script defer data-domain="xyzzr.github.io" src="https://a.erisly.moe/js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kingdom</title>
+  <meta content="Fallen Kingdom video" name="description">
+  <meta content="website" property="og:type">
+  <meta content="Kingdom" name="twitter:title" property="og:title">
+  <meta content="Fallen Kingdom video" name="twitter:description" property="og:description">
+  <meta content="https://xyzzr.github.io/icon.png" name="twitter:image" property="og:image">
+  <meta content="summary" name="twitter:card">
+  <script defer data-domain="xyzzr.github.io" src="https://a.erisly.moe/js/script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop>
+    <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
+  </video>
+  <div class="content">
+    <h1>Kingdom</h1>
+  </div>
+</body>
+</html>
