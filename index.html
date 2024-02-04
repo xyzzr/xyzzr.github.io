@@ -22,7 +22,7 @@
 </head>
 <body>
   <button id="startButton" onclick="startVideo()">Click to begin experience</button>
-  <p id="smallText">fart</p>
+  <p id="smallText">\n\nfart</p>
   <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
     const startVideo = () => { const b = document.getElementById('startButton'), v = document.getElementById('backgroundVideo'); if (!v.dataset.started) { b.style.opacity = 0; document.body.style.backgroundColor = '#fff'; setTimeout(() => b.style.display = 'none', 2000); v.play(); v.dataset.started = true; } };
