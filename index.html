@@ -61,22 +61,24 @@
 </head>
 <body>
   <button id="startButton" onclick="startVideo()">Click to begin experience</button>
-  <video id="backgroundVideo" autoplay loop>
+  <video id="backgroundVideo" loop>
     <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
   </video>
-  </div>
 
   <script>
     function startVideo() {
       var button = document.getElementById('startButton');
       var video = document.getElementById('backgroundVideo');
       var content = document.querySelector('.content');
-      button.style.opacity = 0;
-      document.body.style.backgroundColor = '#fff';
-      setTimeout(function() {
-        button.style.display = 'none';
-      }, 2000);
-      video.play();
+      if (!video.hasAttribute('data-started')) {
+        button.style.opacity = 0;
+        document.body.style.backgroundColor = '#fff';
+        setTimeout(function () {
+          button.style.display = 'none';
+        }, 2000);
+        video.play();
+        video.setAttribute('data-started', 'true');
+      }
     }
   </script>
 </body>
