@@ -10,7 +10,7 @@
   <meta content="Fallen Kingdom video" name="twitter:description" property="og:description">
   <meta content="https://xyzzr.github.io/icon.png" name="twitter:image" property="og:image">
   <meta content="summary" name="twitter:card">
-  <script defer data-domain="xyzzr.github.io" src="https://a.erisly.moe/js/script.js"></script>
+  <script defer src="https://a.erisly.moe/js/script.js"></script>
   <style>
     body {
       margin: 0;
@@ -29,17 +29,6 @@
       z-index: -1;
     }
 
-    .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 2s ease;
-    }
-
     #startButton {
       position: fixed;
       top: 70%;
@@ -51,11 +40,11 @@
       color: #fff;
       border: none;
       cursor: pointer;
-      transition: background-color 0.3s ease; /* Add transition for smooth color change on hover */
+      transition: background-color 0.3s ease;
     }
 
     #startButton:hover {
-      background-color: #333; /* Lighten the background color on hover */
+      background-color: #333;
     }
   </style>
 </head>
@@ -69,7 +58,6 @@
     function startVideo() {
       var button = document.getElementById('startButton');
       var video = document.getElementById('backgroundVideo');
-      var content = document.querySelector('.content');
       if (!video.hasAttribute('data-started')) {
         button.style.opacity = 0;
         document.body.style.backgroundColor = '#fff';
