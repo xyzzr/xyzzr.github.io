@@ -53,19 +53,16 @@
   <video id="backgroundVideo" loop>
     <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
   </video>
-
   <script>
     function startVideo() {
       var button = document.getElementById('startButton');
       var video = document.getElementById('backgroundVideo');
-      if (!video.hasAttribute('data-started')) {
+      if (!video.dataset.started) {
         button.style.opacity = 0;
         document.body.style.backgroundColor = '#fff';
-        setTimeout(function () {
-          button.style.display = 'none';
-        }, 2000);
+        setTimeout(() => button.style.display = 'none', 2000);
         video.play();
-        video.setAttribute('data-started', 'true');
+        video.dataset.started = true;
       }
     }
   </script>
