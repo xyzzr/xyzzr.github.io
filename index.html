@@ -118,19 +118,6 @@
       setInterval(createSnowball, 2000);
     }
 
-    function updateHeadline() {
-      const randomIndex = Math.floor(Math.random() * textOptions.length);
-      const newHeadline = textOptions[randomIndex];
-      const headlineElement = document.querySelector('.headline');
-      headlineElement.style.transition = 'opacity 0.5s ease-out';
-      headlineElement.style.opacity = 0;
-      setTimeout(() => {
-        headlineElement.textContent = newHeadline;
-        headlineElement.style.transition = 'opacity 0.5s ease-in';
-        headlineElement.style.opacity = 1;
-      }, 500);
-    }
-
     const startVideo = () => {
       const button = document.getElementById('startButton');
       const video = document.getElementById('backgroundVideo');
@@ -151,8 +138,6 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       createSnowfall();
-      updateHeadline();
-      setInterval(updateHeadline, 10000);
     });
   </script>
 </body>
