@@ -5,13 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kingdom</title>
   <link rel="icon" href="https://xyzzr.github.io/icon.png" type="image/x-icon">
-  <meta content="Fallen Kingdom video" name="description">
-  <meta content="website" property="og:type">
-  <meta content="Kingdom" name="twitter:title" property="og:title">
-  <meta content="Fallen Kingdom video" name="twitter:description" property="og:description">
-  <meta content="https://xyzzr.github.io/icon.png" name="twitter:image" property="og:image">
-  <meta content="summary" name="twitter:card">
-  <script defer src="https://a.erisly.moe/js/script.js"></script>
   <style>
     body {
       margin: 0;
@@ -28,37 +21,37 @@
       object-fit: cover;
       z-index: -1;
     }
-    #startButton {
+    #startButton, #farttext {
       position: fixed;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    #startButton {
       top: 70%;
       left: 50%;
-      transform: translate(-50%, -50%);
       padding: 20px;
-      font-size: 24px;
       background-color: #000;
-      color: #fff;
       border: none;
-      cursor: pointer;
       transition: background-color 0.3s ease;
     }
     #startButton:hover {
       background-color: #333;
     }
     #farttext {
-      position: fixed;
       top: 80%;
       left: 50%;
-      transform: translate(-50%, -50%);
       font-size: 14px;
-      color: #fff;
-      animation: glow 2s infinite alternate; /* Add the animation property */
+      animation: glow 2s infinite alternate;
+      display: none;
     }
     @keyframes glow {
       from {
-        text-shadow: 0 0 10px #fff; /* Initial shadow */
+        text-shadow: 0 0 10px #fff;
       }
       to {
-        text-shadow: 0 0 20px #f00; /* Final shadow, adjust as needed */
+        text-shadow: 0 0 20px #f00;
       }
     }
   </style>
@@ -71,7 +64,7 @@
     const startVideo = () => {
       const button = document.getElementById('startButton');
       const video = document.getElementById('backgroundVideo');
-      const farttext = document.getElementById('farttext'); // Correct the ID
+      const farttext = document.getElementById('farttext');
 
       if (!video.dataset.started) {
         button.style.opacity = 0;
