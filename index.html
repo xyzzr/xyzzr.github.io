@@ -35,14 +35,41 @@
       color: #fff;
       text-align: center;
     }
+
+    #startButton {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      font-size: 24px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <video autoplay loop>
+  <button id="startButton" onclick="startVideo()">Start Video</button>
+  <video id="backgroundVideo" autoplay loop>
     <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
   </video>
   <div class="content">
     <h1>Kingdom</h1>
   </div>
+
+  <script>
+    function startVideo() {
+      var button = document.getElementById('startButton');
+      var video = document.getElementById('backgroundVideo');
+
+      // Hide the button
+      button.style.display = 'none';
+
+      // Start the video
+      video.play();
+    }
+  </script>
 </body>
 </html>
