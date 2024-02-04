@@ -15,6 +15,8 @@
     body {
       margin: 0;
       overflow: hidden;
+      background-color: #000; /* Set initial background color to black */
+      transition: background-color 2s ease; /* Add transition for smooth color change */
     }
 
     video {
@@ -34,6 +36,8 @@
       padding: 20px;
       color: #fff;
       text-align: center;
+      opacity: 0; /* Set initial opacity to 0 */
+      transition: opacity 2s ease; /* Add transition for smooth opacity change */
     }
 
     #startButton {
@@ -43,7 +47,7 @@
       transform: translate(-50%, -50%);
       padding: 20px;
       font-size: 24px;
-      background-color: #3498db;
+      background-color: #000; /* Set button background color to black */
       color: #fff;
       border: none;
       cursor: pointer;
@@ -51,7 +55,7 @@
   </style>
 </head>
 <body>
-  <button id="startButton" onclick="startVideo()">Start Video</button>
+  <button id="startButton" onclick="startVideo()">Click to begin experience</button>
   <video id="backgroundVideo" autoplay loop>
     <source src="https://xyzzr.github.io/main.mp4" type="video/mp4">
   </video>
@@ -63,9 +67,20 @@
     function startVideo() {
       var button = document.getElementById('startButton');
       var video = document.getElementById('backgroundVideo');
+      var content = document.querySelector('.content');
 
-      // Hide the button
-      button.style.display = 'none';
+      // Fade out button and content
+      button.style.opacity = 0;
+      content.style.opacity = 0;
+
+      // Change background color to white
+      document.body.style.backgroundColor = '#fff';
+
+      // Hide the button after the fade out animation completes
+      setTimeout(function() {
+        button.style.display = 'none';
+        content.style.display = 'none';
+      }, 2000); // Set the timeout to match the duration of the transition
 
       // Start the video
       video.play();
