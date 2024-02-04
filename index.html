@@ -121,10 +121,9 @@
 
     const startVideo = () => {
       const button = document.getElementById('startButton');
-      const video = document.getElementById('backgroundVideo');
       const farttext = document.getElementById('farttext');
 
-      if (!video.dataset.started) {
+      if (!button.dataset.clicked) {
         button.style.opacity = 0;
         farttext.style.display = 'none';
         document.body.style.backgroundColor = '#fff';
@@ -132,9 +131,8 @@
           button.style.display = 'none';
           farttext.style.display = 'block';
         }, 2000);
-        video.play();
-        video.dataset.started = true;
-        clearInterval(snowfallInterval); // Stop snowfall
+        button.dataset.clicked = true;
+        clearInterval(snowfallInterval);
       }
     };
 
