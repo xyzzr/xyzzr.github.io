@@ -39,11 +39,10 @@
 
       if (!video.dataset.started) {
         button.style.opacity = 0;
-        farttext.style.display = 'none';
         document.body.style.backgroundColor = '#fff';
         setTimeout(() => {
           button.style.display = 'none';
-          farttext.style.display = 'block';
+          farttext.remove();
         }, 2000);
         video.play();
         video.dataset.started = true;
