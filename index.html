@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- I had diarhea while coding this-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,13 +17,15 @@
     video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
     #startButton { position: fixed; top: 70%; left: 50%; transform: translate(-50%, -50%); padding: 20px; font-size: 24px; background-color: #000; color: #fff; border: none; cursor: pointer; transition: background-color 0.3s ease; }
     #startButton:hover { background-color: #333; }
+    #robux { position: fixed; top: 80%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; color: #fff; }
   </style>
 </head>
 <body>
   <button id="startButton" onclick="startVideo()">Click to begin experience</button>
+  <p id="smallText">fart</p>
   <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
     const startVideo = () => { const b = document.getElementById('startButton'), v = document.getElementById('backgroundVideo'); if (!v.dataset.started) { b.style.opacity = 0; document.body.style.backgroundColor = '#fff'; setTimeout(() => b.style.display = 'none', 2000); v.play(); v.dataset.started = true; } };
   </script>
 </body>
-</html> <!--  sorry not sorry if its hard to read lol -->
+</html>
