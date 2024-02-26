@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!  "nooooo the script looks so trash and looks like its made by chatgpt" - 🤓  >
+<!-- "nooooo the script looks so trash and looks like it's made by ChatGPT" - 🤓 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
   </style>
 </head>
 <body>
-  <button id="start" onclick="start()">[Click To Continue]</button>
+  <button id="start" onclick="startVideo()">[Click To Continue]</button>
   <p id="credtext">(made by clear)</p>
   <video id="backgroundVideo" loop src="https://xyzzr.github.io/main.mp4"></video>
   <script>
@@ -38,7 +38,7 @@
       const video = document.getElementById('backgroundVideo');
       const credtext = document.getElementById('credtext');
       if (!video.dataset.started) {
-        button.style.opacity = 0;
+        start.style.opacity = 0;
         document.body.style.backgroundColor = '#fff';
         setTimeout(() => {
           start.style.display = 'none';
