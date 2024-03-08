@@ -45,6 +45,10 @@
             100% { color: orange; }
         }
     </style>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('mousedown', event => event.preventDefault());
+    </script>
 </head>
 <body>
     <div class="blur-layer"></div>
