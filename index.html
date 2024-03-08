@@ -31,6 +31,16 @@
             position: relative;
             z-index: 1;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: rainbow 5s linear infinite; /* Apply rainbow animation */
+        }
+
+        @keyframes rainbow {
+            0% { color: red; }
+            20% { color: orange; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: violet; }
         }
     </style>
 </head>
