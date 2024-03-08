@@ -44,14 +44,25 @@
             85% { color: red; }
             100% { color: orange; }
         }
+        .hidden {
+            display: none;
+        }
     </style>
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('mousedown', event => event.preventDefault());
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('focusText').classList.add('hidden');
+                document.getElementById('loadStringsText').classList.remove('hidden');
+            }, 20000); // 20 seconds
+        });
     </script>
 </head>
 <body>
     <div class="blur-layer"></div>
-    <h1>Focus</h1>
+    <h1 id="focusText">Focus</h1>
+    <h1 id="loadStringsText" class="hidden">This website is for loadstrings</h1>
 </body>
 </html>
