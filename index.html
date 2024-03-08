@@ -8,28 +8,13 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            position: relative;
-            overflow: hidden;
-            user-select: none;
-        }
-        .background {
             background-image: url('https://xyzzr.github.io/5bea5e1bec1faf298e851b2e2288fc1b.gif');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            user-select: none;
         }
         .blur-layer {
             position: absolute;
@@ -45,7 +30,7 @@
             padding-top: 20vh;
             font-family: 'Comic Sans MS', cursive;
             position: relative;
-            z-index: 2;
+            z-index: 1;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             animation: rainbow 5s linear infinite;
         }
@@ -75,8 +60,6 @@
     </script>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="overlay"></div>
     <div class="blur-layer"></div>
     <h1 id="text1">Focus</h1>
     <h1 id="text2" class="hidden">This website is for loadstrings</h1>
