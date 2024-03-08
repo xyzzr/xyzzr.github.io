@@ -51,18 +51,17 @@
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('mousedown', event => event.preventDefault());
-
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
-                document.getElementById('focusText').classList.add('hidden');
-                document.getElementById('loadStringsText').classList.remove('hidden');
-            }, 20000); // 20 seconds
+                document.getElementById('text1').classList.add('hidden');
+                document.getElementById('text2').classList.remove('hidden');
+            }, 10000);
         });
     </script>
 </head>
 <body>
     <div class="blur-layer"></div>
-    <h1 id="focusText">Focus</h1>
-    <h1 id="loadStringsText" class="hidden">This website is for loadstrings</h1>
+    <h1 id="text1">Focus</h1>
+    <h1 id="text2" class="hidden">This website is for loadstrings</h1>
 </body>
 </html>
