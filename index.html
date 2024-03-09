@@ -57,11 +57,17 @@
                 document.getElementById('text2').classList.remove('hidden');
             }, 10000);
         });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12') {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            }
+        });
     </script>
 </head>
 <body>
     <div class="blur-layer"></div>
     <h1 id="text1">Focus</h1>
-    <h1 id="text2" class="hidden">This website is for loadstrings</h1>
+    <h1 id="text2" class="hidden">Made by clear</h1>
 </body>
 </html>
