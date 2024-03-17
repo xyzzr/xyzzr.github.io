@@ -8,7 +8,7 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url('https://xyzzr.github.io/5bea5e1bec1faf298e851b2e2288fc1b.gif');
+            background-image: url('https://xyzzr.github.io/winsXPmountains.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -28,24 +28,28 @@
             color: white;
             text-align: center;
             padding-top: 20vh;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'gotham ssm', cursive;
             position: relative;
             z-index: 1;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            animation: rainbow 5s linear infinite;
-        }
-
-        @keyframes rainbow {
-            0% { color: red; }
-            17% { color: orange; }
-            34% { color: yellow; }
-            51% { color: blue; }
-            68% { color: violet; }
-            85% { color: red; }
-            100% { color: orange; }
         }
         .hidden {
             display: none;
+        }
+        .button {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
     <script>
@@ -53,7 +57,6 @@
         document.addEventListener('mousedown', event => event.preventDefault());
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
-                document.getElementById('text1').classList.add('hidden');
                 document.getElementById('text2').classList.remove('hidden');
             }, 10000);
         });
@@ -67,7 +70,13 @@
 </head>
 <body>
     <div class="blur-layer"></div>
-    <h1 id="text1">This website is made to spread word about emulator/mobile skids, they are weird and should not exist. Just use CE exploits</h1>
-    <h1 id="text2" class="hidden"><a href="https://www.roblox.com" target="_blank" rel="noopener noreferrer">Teleporter game</a></h1>
+    <h1 id="text1">
+        This website is created to raise awareness about emulator/mobile skids.<br>
+        Known Roblox mobile executors that are malware/adware, etc: <br>
+        Delta <button class="button" onclick="window.location.href='https://xyzzr.github.io/Delta'">[Source]</button> <br>
+        Codex <button class="button" onclick="window.location.href='https://xyzzr.github.io/Codex'">[Source]</button> <br>
+        VegaX <button class="button" onclick="window.location.href='https://xyzzr.github.io/VegaX'">[Source]</button> <br>
+        ArceusX <button class="button" onclick="window.location.href='https://xyzzr.github.io/ArceusX'">[Source]</button> <br>
+    </h1>
 </body>
 </html>
