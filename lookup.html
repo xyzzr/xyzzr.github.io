@@ -1,12 +1,54 @@
 <!DOCTYPE html>
+<script>
+    console.log("IP lookup Version 1.7B , Made by xyzzr");
+</script>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP Lookup</title>
+        <script>
+        const titles = [
+            "X",
+            "Xy",
+            "Xyz",
+            "Xyzz",
+            "Xyzzr",
+            "Xyzzr - ",
+            "Xyzzr - L",
+            "Xyzzr - Lo",
+            "Xyzzr - Loo",
+            "Xyzzr - Look",
+            "Xyzzr - Looku",
+            "Xyzzr - Lookup",
+            "Xyzzr - Lookup",
+            "Xyzzr - Looku",
+            "Xyzzr - Look",
+            "Xyzzr - Loo",
+            "Xyzzr - Lo",
+            "Xyzzr - L",
+            "Xyzzr - ",
+            "Xyzzr",
+            "Xyzz",
+            "Xyz",
+            "Xy",
+            "X"
+        ];
+
+        let index = 0;
+
+        function updatetitle() {
+            document.title = titles[index];
+            index = (index + 1) % titles.length;
+            setTimeout(updatetitle, 500);
+        }
+        updatetitle();
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
         .container {
             max-width: 500px;
@@ -18,7 +60,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #f0f0f0; /* White shade for the container */
+            position: relative;
         }
         input[type="text"] {
             width: 100%;
@@ -26,8 +68,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #333; /* Black for text input by default */
-            color: #fff; /* White text by default */
+            color: #000;
         }
         button {
             padding: 10px 20px;
@@ -36,18 +77,26 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
         button:hover {
             background-color: #0056b3;
         }
-        /* Default light mode styles */
+        .version {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #888;
+            font-size: 12px;
+        }
         .container.light-mode {
             background-color: #fff;
             color: #000;
         }
         .container.light-mode input[type="text"] {
-            background-color: #fff; /* White text box in light mode */
-            color: #000; /* Black text in light mode */
+            background-color: #fff;
         }
         .container.light-mode button {
             background-color: #007bff;
@@ -56,36 +105,43 @@
         .container.light-mode button:hover {
             background-color: #0056b3;
         }
-        /* Night mode styles */
+
         .container.night-mode {
             background-color: #000;
             color: #fff;
         }
+        .container.night-mode input[type="text"] {
+            background-color: #000;
+            color: #fff;
+        }
         .container.night-mode button {
-            background-color: #fff;
-            color: #000;
+            background-color: #333;
+            color: #fff;
         }
         .container.night-mode button:hover {
-            background-color: #f0f0f0;
+            background-color: #0056b3;
         }
     </style>
 </head>
-<body>
-    <div class="container night-mode" id="container">
-        <h2>IP Lookup</h2>
-        <input type="text" id="ipInput" placeholder="Enter IP Address">
-        <button onclick="lookupIP()">Lookup</button>
+<body class="light-mode">
+    <div class="container" id="container">
+        <h2>Lookup</h2>
+        <input type="text" id="ipInput" placeholder="Enter IP Address" oninput="lookupip()">
         <div id="result"></div>
-        <button onclick="toggleMode()">Toggle Mode</button>
+        <span class="version">v1.7B</span>
     </div>
 
     <script>
-        function lookupIP() {
-            var ip = document.getElementById('ipInput').value;
+        function lookupip() {
+            var ip = document.getElementById('ipInput').value.trim();
+            var result = document.getElementById('result');
+            if (ip === '') {
+                result.innerHTML = 'enter something bud';
+                return;
+            }
             fetch('https://ipapi.co/' + ip + '/json/')
             .then(response => response.json())
             .then(data => {
-                var result = document.getElementById('result');
                 result.innerHTML = '<strong>IP:</strong> ' + data.ip + '<br>' +
                                     '<strong>Network:</strong> ' + data.network + '<br>' +
                                     '<strong>Version:</strong> ' + data.version + '<br>' +
@@ -116,15 +172,8 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                var result = document.getElementById('result');
                 result.innerHTML = 'Error fetching data. Please try again.';
             });
-        }
-
-        function toggleMode() {
-            var container = document.getElementById('container');
-            container.classList.toggle('night-mode');
-            container.classList.toggle('light-mode');
         }
     </script>
 </body>
