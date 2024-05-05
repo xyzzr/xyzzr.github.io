@@ -37,14 +37,39 @@
         button:hover {
             background-color: #0056b3;
         }
+        /* Default light mode styles */
+        .container.light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+        .container.light-mode button {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .container.light-mode button:hover {
+            background-color: #0056b3;
+        }
+        /* Night mode styles */
+        .container.night-mode {
+            background-color: #000;
+            color: #fff;
+        }
+        .container.night-mode button {
+            background-color: #fff;
+            color: #000;
+        }
+        .container.night-mode button:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container night-mode" id="container">
         <h2>IP Lookup</h2>
         <input type="text" id="ipInput" placeholder="Enter IP Address">
         <button onclick="lookupIP()">Lookup</button>
         <div id="result"></div>
+        <button onclick="toggleMode()">Toggle Mode</button>
     </div>
 
     <script>
@@ -87,6 +112,12 @@
                 var result = document.getElementById('result');
                 result.innerHTML = 'Error fetching data. Please try again.';
             });
+        }
+
+        function toggleMode() {
+            var container = document.getElementById('container');
+            container.classList.toggle('night-mode');
+            container.classList.toggle('light-mode');
         }
     </script>
 </body>
