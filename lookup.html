@@ -26,8 +26,8 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #333; /* Black for text input */
-            color: #fff; /* White text */
+            background-color: #333; /* Black for text input by default */
+            color: #fff; /* White text by default */
         }
         button {
             padding: 10px 20px;
@@ -44,6 +44,10 @@
         .container.light-mode {
             background-color: #fff;
             color: #000;
+        }
+        .container.light-mode input[type="text"] {
+            background-color: #fff; /* White text box in light mode */
+            color: #000; /* Black text in light mode */
         }
         .container.light-mode button {
             background-color: #007bff;
