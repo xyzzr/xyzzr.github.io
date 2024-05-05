@@ -51,10 +51,33 @@
             .then(response => response.json())
             .then(data => {
                 var result = document.getElementById('result');
-                result.innerHTML = '<strong>City:</strong> ' + data.city + '<br>' +
+                result.innerHTML = '<strong>IP:</strong> ' + data.ip + '<br>' +
+                                    '<strong>Network:</strong> ' + data.network + '<br>' +
+                                    '<strong>Version:</strong> ' + data.version + '<br>' +
+                                    '<strong>City:</strong> ' + data.city + '<br>' +
                                     '<strong>Region:</strong> ' + data.region + '<br>' +
-                                    '<strong>Country:</strong> ' + data.country_name + '<br>' +
-                                    '<strong>Time Zone:</strong> ' + data.timezone;
+                                    '<strong>Region Code:</strong> ' + data.region_code + '<br>' +
+                                    '<strong>Country:</strong> ' + data.country + '<br>' +
+                                    '<strong>Country Name:</strong> ' + data.country_name + '<br>' +
+                                    '<strong>Country Code:</strong> ' + data.country_code + '<br>' +
+                                    '<strong>Country Code ISO3:</strong> ' + data.country_code_iso3 + '<br>' +
+                                    '<strong>Country Capital:</strong> ' + data.country_capital + '<br>' +
+                                    '<strong>Country TLD:</strong> ' + data.country_tld + '<br>' +
+                                    '<strong>Continent Code:</strong> ' + data.continent_code + '<br>' +
+                                    '<strong>In EU:</strong> ' + data.in_eu + '<br>' +
+                                    '<strong>Postal:</strong> ' + data.postal + '<br>' +
+                                    '<strong>Latitude:</strong> ' + data.latitude + '<br>' +
+                                    '<strong>Longitude:</strong> ' + data.longitude + '<br>' +
+                                    '<strong>Timezone:</strong> ' + data.timezone + '<br>' +
+                                    '<strong>UTC Offset:</strong> ' + data.utc_offset + '<br>' +
+                                    '<strong>Country Calling Code:</strong> ' + data.country_calling_code + '<br>' +
+                                    '<strong>Currency:</strong> ' + data.currency + '<br>' +
+                                    '<strong>Currency Name:</strong> ' + data.currency_name + '<br>' +
+                                    '<strong>Languages:</strong> ' + data.languages + '<br>' +
+                                    '<strong>Country Area:</strong> ' + data.country_area + '<br>' +
+                                    '<strong>Country Population:</strong> ' + data.country_population + '<br>' +
+                                    '<strong>ASN:</strong> ' + data.asn + '<br>' +
+                                    '<strong>Org:</strong> ' + data.org;
             })
             .catch(error => {
                 console.error('Error:', error);
