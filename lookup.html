@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>IP Lookup</h2>
+        <input type="text" id="ipInput" placeholder="Enter IP Address">
+        <button onclick="lookupIP()">Lookup</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function lookupIP() {
+            var ip = document.getElementById('ipInput').value;
+            fetch('https://ipapi.co/' + ip + '/json/')
+            .then(response => response.json())
+            .then(data => {
+                var result = document.getElementById('result');
+                result.innerHTML = '<strong>City:</strong> ' + data.city + '<br>' +
+                                    '<strong>Region:</strong> ' + data.region + '<br>' +
+                                    '<strong>Country:</strong> ' + data.country_name + '<br>' +
+                                    '<strong>Time Zone:</strong> ' + data.timezone;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                var result = document.getElementById('result');
+                result.innerHTML = 'Error fetching data. Please try again.';
+            });
+        }
+    </script>
+</body>
+</html>
