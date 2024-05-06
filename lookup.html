@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script>
-    console.log("Lookup Version 1.9B , Made by xyzzr");
+    console.log("Lookup Version 2.1B , Made by xyzzr");
 </script>
 <html lang="en">
 <head>
@@ -124,7 +124,7 @@
         <h2>Lookup</h2>
         <input type="text" id="ipInput" placeholder="Enter IP Address" oninput="lookupip()">
         <div id="result"></div>
-        <span class="version">v1.9B</span>
+        <span class="version">v2.1B</span>
         <button id="copyButton" onclick="copyLookup()" style="display: none;">Copy Lookup</button>
     </div>
     <script>
@@ -183,7 +183,7 @@
             var lookupText = document.getElementById('result').innerText;
             navigator.clipboard.writeText(lookupText)
             .then(() => {
-                alert('Lookup text copied to clipboard.');
+                console.log("copied");
             })
             .catch(err => {
                 console.error('Error:', err);
