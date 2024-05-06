@@ -74,9 +74,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #0056b3;
@@ -126,6 +124,7 @@
         <input type="text" id="ipInput" placeholder="Enter IP Address" oninput="lookupip()">
         <div id="result"></div>
         <span class="version">v1.9B</span>
+        <button onclick="copyInput()">Copy Input</button>
     </div>
     <script>
         function lookupip() {
@@ -170,6 +169,12 @@
                 console.error('Error:', error);
                 result.innerHTML = 'Error fetching data. Please try again.';
             });
+        }
+
+        function copyInput() {
+            var input = document.getElementById('ipInput');
+            input.select();
+            document.execCommand('copy');
         }
     </script>
 </body>
