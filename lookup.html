@@ -68,6 +68,7 @@
             color: #000;
         }
         button {
+            display: none;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
@@ -124,16 +125,22 @@
         <input type="text" id="ipInput" placeholder="Enter IP Address" oninput="lookupip()">
         <div id="result"></div>
         <span class="version">v1.9B</span>
-        <button onclick="copyInput()">Copy Input</button>
+        <button id="copyButton" onclick="copyLookup()" style="display: none;">Copy Lookup</button>
     </div>
     <script>
         function lookupip() {
             var ip = document.getElementById('ipInput').value.trim();
             var result = document.getElementById('result');
+            var copyButton = document.getElementById('copyButton');
+            
             if (ip === '') {
                 result.innerHTML = 'enter something bud';
+                copyButton.style.display = 'none';
                 return;
             }
+
+            copyButton.style.display = 'block';
+            
             fetch('https://ipapi.co/' + ip + '/json/')
             .then(response => response.json())
             .then(data => {
@@ -168,13 +175,19 @@
             .catch(error => {
                 console.error('Error:', error);
                 result.innerHTML = 'Error fetching data. Please try again.';
+                copyButton.style.display = 'none';
             });
         }
 
-        function copyInput() {
-            var input = document.getElementById('ipInput');
-            input.select();
-            document.execCommand('copy');
+        function copyLookup() {
+            var lookupText = document.getElementById('result').innerText;
+            navigator.clipboard.writeText(lookupText)
+            .then(() => {
+                alert('Lookup text copied to clipboard.');
+            })
+            .catch(err => {
+                console.error('Error:', err);
+            });
         }
     </script>
 </body>
