@@ -1,7 +1,3 @@
-function control()
-    print("hi")
-end
-
 _G.remote_One = 1
 _G.remote_Two = 2
 _G.remote_Three = 3
