@@ -2,7 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Xyzzr</title>
+            <script>
+        const titles = [
+            "X",
+            "Xv",
+            "Xvi",
+            "Xvid",
+            "Xvide",
+            "Xvideo",
+            "Xideos",
+            "Xideos",
+            "Xideo",
+            "Xide",
+            "Xid",
+            "Xi",
+            "X",
+            "Xy",
+            "Xyz",
+            "Xyzz",
+            "Xyzzr",
+            "Xyzzr",
+            "Xyzz",
+            "Xyz",
+            "Xy",
+            "X"
+        ];
+
+        let index = 0;
+        function updatetitle() {
+            document.title = titles[index];
+            index = (index + 1) % titles.length;
+            setTimeout(updatetitle, 500);
+        }
+        updatetitle();
+    </script>
     <style>
         body {
             margin: 0;
