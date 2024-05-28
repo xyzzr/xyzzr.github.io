@@ -11,58 +11,37 @@
     <meta property="og:title" content="Autism">
     <meta property="og:description" content="Here lies the antisocial rejects.">
     <link rel="stylesheet" href="legacy/index.css">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="///netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://xyzzr.github.io/misc/dropdown.css" rel="stylesheet">
-    <link href="https://doxbin.com/files/doxbin.css?r=5" rel="stylesheet">
-    <script src="https://doxbin.com/legacy/jquery.min.js"></script>
+    <link href="https://doxbin.com//files/doxbin.css?r=5" rel="stylesheet">
+    <script src="https://doxbin.com//legacy/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://doxbin.com/legacy/logout.js"></script>
     <style>
         html {
             overflow-x: hidden;
         }
-        input[type=text], select, option {
-            line-height: 1.2;
+
+        body {
+            background-color: black;
             color: white;
-            background: #282828;
-            border: 0;
-            border-radius: 2px;
-            display: inline-block;
-            -webkit-font-smoothing: antialiased;
-            outline: none;
-            padding: 7px 5px;
-            width: 200px;
-        }
-        input[type=text]::placeholder {
-            color: rgb(167, 167, 167);
-        }
-        input[type=submit] {
-            line-height: 1.2;
-            color: white;
-            background: #282828;
-            border: 0;
-            border-radius: 2px;
-            display: inline-block;
-            -webkit-font-smoothing: antialiased;
-            outline: none;
-            padding: 7px 5px;
-        }
-        input, select, option {
-            font-size: 100%;
-        }
-        input[type=submit]:hover {
-            color: white;
-            background: #3d3d3d;
-            text-decoration: none;
-        }
-        .center {
             text-align: center;
         }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         .admin-text {
             color: red;
             font-weight: bold;
         }
+
         .doxbin-text {
             text-align: center;
             background-color: inherit;
@@ -72,33 +51,35 @@
             padding-bottom: 0;
             margin-bottom: 0;
         }
+
         .hoa-title {
             margin: 5px 0 0 0;
             letter-spacing: 2px;
         }
+
         .hoa-container {
             border: solid 1px rgb(40, 40, 40);
             background-color: rgb(14, 14, 14);
             width: 32%;
             border-radius: 2px;
-            float: left;
             margin: 10px 5px;
             position: relative;
             padding: 15px;
-            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
             height: 460px;
         }
+
         .hoa-container:hover {
             border: solid 1px rgb(44, 44, 44);
             background-color: rgb(18, 18, 18);
         }
+
         .hoa-container .hoa-image {
             text-align: center;
             max-height: 215px;
             border-bottom: solid 1px rgb(40, 40, 40);
         }
+
         .hoa-container .hoa-image img {
             width: 100%;
             height: 200px;
@@ -106,6 +87,7 @@
             max-height: 200px;
             margin-bottom: 15px;
         }
+
         .hoa-container .hoa-name {
             padding-top: 10px;
             text-align: center;
@@ -113,6 +95,7 @@
             font-size: 20px;
             font-weight: bold;
         }
+
         .hoa-container .hoa-description {
             margin-top: 5px;
             text-align: center;
@@ -121,70 +104,84 @@
             overflow-y: auto;
             height: 160px;
         }
+
         @media only screen and (max-width: 991px) {
             .hoa-container {
                 width: 48%;
             }
         }
+
         @media only screen and (max-width: 575px) {
             .hoa-container {
                 width: 100%;
             }
         }
+
         @media only screen and (max-width: 271px) {
             .doxbin-text {
                 font-size: 9px;
                 line-height: 10px;
             }
+
             .hoa-title {
                 font-size: 16px;
                 letter-spacing: 2px;
             }
         }
+
         ::-webkit-scrollbar {
             width: 7px;
         }
+
         ::-webkit-scrollbar-track {
             background: #cacaca;
         }
+
         ::-webkit-scrollbar-thumb {
             background: rgb(110, 110, 110);
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: rgb(68, 68, 68);
         }
+
         .rainbow {
             text-shadow: 2px 2px 4px #000000;
             -webkit-animation: rainbow 5s infinite;
             -ms-animation: rainbow 5s infinite;
             animation: rainbow 5s infinite;
         }
+
         @-webkit-keyframes rainbow {
-            0% {color: red;}
-            17% {color: orange;}
-            33% {color: yellow;}
-            50% {color: green;}
-            67% {color: blue;}
-            84% {color: purple;}
-            100% {color: red;}
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
         }
+
+        /* Internet Explorer */
         @-ms-keyframes rainbow {
-            0% {color: red;}
-            17% {color: orange;}
-            33% {color: yellow;}
-            50% {color: green;}
-            67% {color: blue;}
-            84% {color: purple;}
-            100% {color: red;}
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
         }
+
+        /* Standard Syntax */
         @keyframes rainbow {
-            0% {color: red;}
-            17% {color: orange;}
-            33% {color: yellow;}
-            50% {color: green;}
-            67% {color: blue;}
-            84% {color: purple;}
-            100% {color: red;}
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
         }
     </style>
     <script>
@@ -205,8 +202,9 @@
         var tinyy = new Array();
         var tinyv = new Array();
 
-        window.onload = function() {
+        window.onload = function () {
             if (document.getElementById) {
+                var i, rats, rlef, rdow;
                 for (var i = 0; i < sparkles; i++) {
                     var rats = createDiv(3, 3);
                     rats.style.visibility = "hidden";
@@ -214,7 +212,7 @@
                     document.body.appendChild(tiny[i] = rats);
                     starv[i] = 0;
                     tinyv[i] = 0;
-                    rats = createDiv(5, 5);
+                    var rats = createDiv(5, 5);
                     rats.style.backgroundColor = "transparent";
                     rats.style.visibility = "hidden";
                     rats.style.zIndex = "999";
@@ -240,8 +238,9 @@
                 oy = y;
                 for (c = 0; c < sparkles; c++) if (!starv[c]) {
                     star[c].style.left = (starx[c] = x) + "px";
-                    star[c].style.top = (stary[c] = y) + "px";
+                    star[c].style.top = (stary[c] = y + 1) + "px";
                     star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                    star[c].childNodes[0].style.backgroundColor = star[c].childNodes[1].style.backgroundColor = (colour == "random") ? newColour() : colour;
                     star[c].style.visibility = "visible";
                     starv[c] = 50;
                     break;
@@ -262,19 +261,22 @@
                     star[i].style.top = stary[i] + "px";
                     starx[i] += (i % 5 - 2) / 5;
                     star[i].style.left = starx[i] + "px";
-                } else {
+                }
+                else {
                     star[i].style.visibility = "hidden";
                     starv[i] = 0;
                     return;
                 }
-            } else {
+            }
+            else {
                 tinyv[i] = 50;
-                tiny[i].style.top = tinyy[i] = stary[i] + "px";
-                tiny[i].style.left = tinyx[i] = starx[i] + "px";
+                tiny[i].style.top = (tinyy[i] = stary[i]) + "px";
+                tiny[i].style.left = (tinyx[i] = starx[i]) + "px";
                 tiny[i].style.width = "2px";
                 tiny[i].style.height = "2px";
+                tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
                 star[i].style.visibility = "hidden";
-                tiny[i].style.visibility = "visible";
+                tiny[i].style.visibility = "visible"
             }
         }
 
@@ -289,32 +291,37 @@
                     tiny[i].style.top = tinyy[i] + "px";
                     tinyx[i] += (i % 5 - 2) / 5;
                     tiny[i].style.left = tinyx[i] + "px";
-                } else {
+                }
+                else {
                     tiny[i].style.visibility = "hidden";
                     tinyv[i] = 0;
                     return;
                 }
-            } else tiny[i].style.visibility = "hidden";
+            }
+            else tiny[i].style.visibility = "hidden";
         }
 
-        document.onmousemove = function(event) {
+        document.onmousemove = mouse;
+        function mouse(e) {
             set_scroll();
-            y = event.pageY;
-            x = event.pageX;
+            y = (e) ? e.pageY : event.y + sdown;
+            x = (e) ? e.pageX : event.x + sleft;
         }
 
-        window.onscroll = set_scroll;
         function set_scroll() {
-            if (typeof(self.pageYOffset) == 'number') {
+            if (typeof (self.pageYOffset) == "number") {
                 sdown = self.pageYOffset;
                 sleft = self.pageXOffset;
-            } else if (document.body.scrollTop || document.body.scrollLeft) {
+            }
+            else if (document.body.scrollTop || document.body.scrollLeft) {
                 sdown = document.body.scrollTop;
                 sleft = document.body.scrollLeft;
-            } else if (document.documentElement.scrollTop || document.documentElement.scrollLeft) {
+            }
+            else if (document.documentElement.scrollTop || document.documentElement.scrollLeft) {
                 sleft = document.documentElement.scrollLeft;
                 sdown = document.documentElement.scrollTop;
-            } else {
+            }
+            else {
                 sdown = 0;
                 sleft = 0;
             }
@@ -322,13 +329,15 @@
 
         window.onresize = set_width;
         function set_width() {
-            if (typeof(self.innerWidth) == 'number') {
+            if (typeof (self.innerWidth) == "number") {
                 swide = self.innerWidth;
                 shigh = self.innerHeight;
-            } else if (document.documentElement.clientWidth || document.documentElement.clientHeight) {
+            }
+            else if (document.documentElement.clientWidth || document.documentElement.clientHeight) {
                 swide = document.documentElement.clientWidth;
                 shigh = document.documentElement.clientHeight;
-            } else {
+            }
+            else {
                 swide = document.body.clientWidth;
                 shigh = document.body.clientHeight;
             }
@@ -340,39 +349,42 @@
             div.style.height = height + "px";
             div.style.width = width + "px";
             div.style.overflow = "hidden";
-            return div;
+            return (div);
+        }
+
+        function newColour() {
+            var c = new Array();
+            c[0] = 255;
+            c[1] = Math.floor(Math.random() * 256);
+            c[2] = Math.floor(Math.random() * (256 - c[1] / 2));
+            c.sort(function () { return (0.5 - Math.random()); });
+            return ("rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")");
         }
     </script>
 </head>
 <body>
-    <div class="rainbow">
-        <h1>Welcome to the Corner</h1>
-        <p>Here lies the antisocial rejects.</p>
-    </div>
-
+    <h1 class="hoa-title rainbow">Antisocial Rejects Corner</h1>
     <div class="center">
         <div class="hoa-container">
             <div class="hoa-image">
-                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+                <img src="https://via.placeholder.com/200" alt="Image 1">
             </div>
-            <div class="hoa-name">Person's Name</div>
-            <div class="hoa-description">This is a description of the person.</div>
+            <div class="hoa-name">Name 1</div>
+            <div class="hoa-description">Description for item 1.</div>
         </div>
-
         <div class="hoa-container">
             <div class="hoa-image">
-                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+                <img src="https://via.placeholder.com/200" alt="Image 2">
             </div>
-            <div class="hoa-name">Person's Name</div>
-            <div class="hoa-description">This is a description of the person.</div>
+            <div class="hoa-name">Name 2</div>
+            <div class="hoa-description">Description for item 2.</div>
         </div>
-
         <div class="hoa-container">
             <div class="hoa-image">
-                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+                <img src="https://via.placeholder.com/200" alt="Image 3">
             </div>
-            <div class="hoa-name">Person's Name</div>
-            <div class="hoa-description">This is a description of the person.</div>
+            <div class="hoa-name">Name 3</div>
+            <div class="hoa-description">Description for item 3.</div>
         </div>
     </div>
 </body>
