@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autism</title>
 	<meta name="description" content="Here lies the bullied, antisocial & doxed rejects who stepped into the wrong side of the internet.">
-	
 	<meta property="og:locale" content="en_US">
 	<meta property="og:url" content="https://xyzzr.github.io/Autism">
 	<meta property="og:type" content="website">
@@ -144,40 +143,29 @@
 			letter-spacing: 2px;
 		}
 	}
-	::-webkit-scrollbar { /*scroll bar*/
+	::-webkit-scrollbar {
 		width: 7px;
 	}
 	
-	/* Track */
 	::-webkit-scrollbar-track {
 		background: #cacaca; 
 	}
 	
-	/* Handle */
 	::-webkit-scrollbar-thumb {
 		background: rgb(110, 110, 110); 
 	}
 	
-	/* Handle on hover */
 	::-webkit-scrollbar-thumb:hover {
 		background: rgb(68, 68, 68); 
 	}
 	
 	.rainbow {  
-	   /* Font options */
 	  text-shadow: 2px 2px 4px #000000;
-	  
-	   /* Chrome, Safari, Opera */
 	  -webkit-animation: rainbow 5s infinite; 
-	  
-	  /* Internet Explorer */
 	  -ms-animation: rainbow 5s infinite;
-	  
-	  /* Standar Syntax */
 	  animation: rainbow 5s infinite; 
 	}
 
-	/* Chrome, Safari, Opera */
 	@-webkit-keyframes rainbow{
 	  	0%{color: red;}	
 		17%{color: orange;}
@@ -736,35 +724,5 @@ His eyes bleed of insecurities and antisocialness.<br>
 			</div>
 		</div>
     </div>
-	<script>
-		(function () {
-			const hoaAudio = document.getElementById('hoa-audio');
-
-			function catchHandler() {
-				// Audio playback was blocked.
-				// We will register input listeners to wait until the user has interacted with the page before playing again.
-
-				let inputListener;
-				inputListener = function () {
-					hoaAudio.play();
-					document.removeEventListener('mousedown', inputListener);
-					document.removeEventListener('keydown', inputListener);
-				};
-
-				document.addEventListener('mousedown', inputListener);
-				document.addEventListener('keydown', inputListener);
-			}
-
-			if (hoaAudio.readyState > 1) {
-				// The audio is ready to be played.
-				hoaAudio.play().catch(catchHandler);
-			} else {
-				// The audio cannot be played yet, wait until it is loaded.
-				hoaAudio.addEventListener('canplay', function () {
-					hoaAudio.play().catch(catchHandler);
-				});
-			}
-		})();
-	</script>
 </body>
 </html>
