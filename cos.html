@@ -185,6 +185,21 @@
         }
     </style>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = new Audio("https://xyzzr.github.io/misc/fixed.mp3");
+
+            document.addEventListener("click", function() {
+                audio.play();
+            });
+
+            document.addEventListener("keypress", function() {
+                audio.play();
+            });
+        });
+    </script>
+</head>
+<body>
+    <script>
         var colour = "random";
         var sparkles = 50;
 
