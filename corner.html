@@ -1,464 +1,379 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Corner</title>
-	<meta name="description" content="Here lies the antisocial rejects.">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:url" content="https://xyzzr.github.io/corner">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Autism">
-	<meta property="og:description" content="Here lies the antisocial rejects.">
-      <link rel="stylesheet" href="legacy/index.css">
-     <link href="///netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://xyzzr.github.io/misc/dropdown.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner</title>
+    <meta name="description" content="Here lies the antisocial rejects.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://xyzzr.github.io/corner">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Autism">
+    <meta property="og:description" content="Here lies the antisocial rejects.">
+    <link rel="stylesheet" href="legacy/index.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://xyzzr.github.io/misc/dropdown.css" rel="stylesheet">
+    <link href="https://doxbin.com/files/doxbin.css?r=5" rel="stylesheet">
+    <script src="https://doxbin.com/legacy/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://doxbin.com/legacy/logout.js"></script>
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+        input[type=text], select, option {
+            line-height: 1.2;
+            color: white;
+            background: #282828;
+            border: 0;
+            border-radius: 2px;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            outline: none;
+            padding: 7px 5px;
+            width: 200px;
+        }
+        input[type=text]::placeholder {
+            color: rgb(167, 167, 167);
+        }
+        input[type=submit] {
+            line-height: 1.2;
+            color: white;
+            background: #282828;
+            border: 0;
+            border-radius: 2px;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            outline: none;
+            padding: 7px 5px;
+        }
+        input, select, option {
+            font-size: 100%;
+        }
+        input[type=submit]:hover {
+            color: white;
+            background: #3d3d3d;
+            text-decoration: none;
+        }
+        .center {
+            text-align: center;
+        }
+        .admin-text {
+            color: red;
+            font-weight: bold;
+        }
+        .doxbin-text {
+            text-align: center;
+            background-color: inherit;
+            line-height: 15px;
+            border: none;
+            color: white;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .hoa-title {
+            margin: 5px 0 0 0;
+            letter-spacing: 2px;
+        }
+        .hoa-container {
+            border: solid 1px rgb(40, 40, 40);
+            background-color: rgb(14, 14, 14);
+            width: 32%;
+            border-radius: 2px;
+            float: left;
+            margin: 10px 5px;
+            position: relative;
+            padding: 15px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            height: 460px;
+        }
+        .hoa-container:hover {
+            border: solid 1px rgb(44, 44, 44);
+            background-color: rgb(18, 18, 18);
+        }
+        .hoa-container .hoa-image {
+            text-align: center;
+            max-height: 215px;
+            border-bottom: solid 1px rgb(40, 40, 40);
+        }
+        .hoa-container .hoa-image img {
+            width: 100%;
+            height: 200px;
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 15px;
+        }
+        .hoa-container .hoa-name {
+            padding-top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .hoa-container .hoa-description {
+            margin-top: 5px;
+            text-align: center;
+            color: rgb(200, 200, 200);
+            word-wrap: break-word;
+            overflow-y: auto;
+            height: 160px;
+        }
+        @media only screen and (max-width: 991px) {
+            .hoa-container {
+                width: 48%;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .hoa-container {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 271px) {
+            .doxbin-text {
+                font-size: 9px;
+                line-height: 10px;
+            }
+            .hoa-title {
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cacaca;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgb(110, 110, 110);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(68, 68, 68);
+        }
+        .rainbow {
+            text-shadow: 2px 2px 4px #000000;
+            -webkit-animation: rainbow 5s infinite;
+            -ms-animation: rainbow 5s infinite;
+            animation: rainbow 5s infinite;
+        }
+        @-webkit-keyframes rainbow {
+            0% {color: red;}
+            17% {color: orange;}
+            33% {color: yellow;}
+            50% {color: green;}
+            67% {color: blue;}
+            84% {color: purple;}
+            100% {color: red;}
+        }
+        @-ms-keyframes rainbow {
+            0% {color: red;}
+            17% {color: orange;}
+            33% {color: yellow;}
+            50% {color: green;}
+            67% {color: blue;}
+            84% {color: purple;}
+            100% {color: red;}
+        }
+        @keyframes rainbow {
+            0% {color: red;}
+            17% {color: orange;}
+            33% {color: yellow;}
+            50% {color: green;}
+            67% {color: blue;}
+            84% {color: purple;}
+            100% {color: red;}
+        }
+    </style>
+    <script>
+        var colour = "random";
+        var sparkles = 50;
 
-<link href="https://doxbin.com//files/doxbin.css?r=5" rel="stylesheet"> 
-<script src="https://doxbin.com//legacy/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://doxbin.com/legacy/logout.js"></script>
-	<style>
-		html{
-			overflow-x: hidden;
-		}
-	input[type=text], select, option{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-		width: 200px;
-	}
+        var x = ox = 400;
+        var y = oy = 300;
+        var swide = 800;
+        var shigh = 600;
+        var sleft = sdown = 0;
+        var tiny = new Array();
+        var star = new Array();
+        var starv = new Array();
+        var starx = new Array();
+        var stary = new Array();
+        var tinyx = new Array();
+        var tinyy = new Array();
+        var tinyv = new Array();
 
-	input[type=text]::placeholder{
-		color: rgb(167, 167, 167);
-	}
-	input[type=submit]{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-	}
-	input, select, option{
-		font-size: 100%;
-	}
-	input[type=submit]:hover{
-		color: white;
-		background: #3d3d3d;
-		text-decoration: none;
-	}
-	.center {
-	  text-align: center;
-	}
-    .admin-text{
-        color: red;
-        font-weight: bold;
-    }
-	.doxbin-text{
-		text-align:center;
-		background-color: inherit;
-		line-height:15px;
-		border: none;
-		color: white;
-		padding-bottom:0;
-		margin-bottom:0;
-	}
-	.hoa-title{
-		margin: 5px 0 0 0;
-		letter-spacing: 2px;
-	}
-	.hoa-container{
-		border: solid 1px rgb(40, 40, 40);
-		background-color: rgb(14, 14, 14);
-		width: 32%;
-		border-radius: 2px;
-		float: left;
-		margin: 10px 5px 10px 5px;
-		position: relative;
-		padding: 15px;
-		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		height: 460px;
-	}
-	.hoa-container:hover{
-		border: solid 1px rgb(44, 44, 44);
-		background-color: rgb(18, 18, 18);
-	}
-	.hoa-container .hoa-image{
-		text-align: center;
-		max-height: 215px;
-		border-bottom: solid 1px rgb(40, 40, 40);
-	}
-	.hoa-container .hoa-image img{
-		width: 100%;
-		height: 200px;
-		max-width: 200px;
-		max-height: 200px;
-		margin-bottom: 15px;
-	}
-	.hoa-container .hoa-name{
-		padding-top: 10px;
-		text-align: center;
-		color: white;
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.hoa-container .hoa-description{
-		margin-top: 5px;
-		text-align: center;
-		color: rgb(200,200,200);
-		word-wrap: break-word;
-		overflow-y: auto;
-		height: 160px;
-	}
-	@media  only screen and (max-width: 991px) {
-		.hoa-container{
-			width: 48%;
-		}
-	}
-	@media  only screen and (max-width: 575px) {
-		.hoa-container{
-			width: 100%;
-		}
-	}
-	@media  only screen and (max-width: 271px) {
-		.doxbin-text{
-			font-size: 9px;
-			line-height: 10px;
-		}
-		.hoa-title{
-			font-size: 16px;
-			letter-spacing: 2px;
-		}
-	}
-	::-webkit-scrollbar {
-		width: 7px;
-	}
-	
-	::-webkit-scrollbar-track {
-		background: #cacaca; 
-	}
-	
-	::-webkit-scrollbar-thumb {
-		background: rgb(110, 110, 110); 
-	}
-	
-	::-webkit-scrollbar-thumb:hover {
-		background: rgb(68, 68, 68); 
-	}
-	
-	.rainbow {  
-	  text-shadow: 2px 2px 4px #000000;
-	  -webkit-animation: rainbow 5s infinite; 
-	  -ms-animation: rainbow 5s infinite;
-	  animation: rainbow 5s infinite; 
-	}
+        window.onload = function() {
+            if (document.getElementById) {
+                for (var i = 0; i < sparkles; i++) {
+                    var rats = createDiv(3, 3);
+                    rats.style.visibility = "hidden";
+                    rats.style.zIndex = "999";
+                    document.body.appendChild(tiny[i] = rats);
+                    starv[i] = 0;
+                    tinyv[i] = 0;
+                    rats = createDiv(5, 5);
+                    rats.style.backgroundColor = "transparent";
+                    rats.style.visibility = "hidden";
+                    rats.style.zIndex = "999";
+                    var rlef = createDiv(1, 5);
+                    var rdow = createDiv(5, 1);
+                    rats.appendChild(rlef);
+                    rats.appendChild(rdow);
+                    rlef.style.top = "2px";
+                    rlef.style.left = "0px";
+                    rdow.style.top = "0px";
+                    rdow.style.left = "2px";
+                    document.body.appendChild(star[i] = rats);
+                }
+                set_width();
+                sparkle();
+            }
+        }
 
-	@-webkit-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
+        function sparkle() {
+            var c;
+            if (Math.abs(x - ox) > 1 || Math.abs(y - oy) > 1) {
+                ox = x;
+                oy = y;
+                for (c = 0; c < sparkles; c++) if (!starv[c]) {
+                    star[c].style.left = (starx[c] = x) + "px";
+                    star[c].style.top = (stary[c] = y) + "px";
+                    star[c].style.clip = "rect(0px, 5px, 5px, 0px)";
+                    star[c].style.visibility = "visible";
+                    starv[c] = 50;
+                    break;
+                }
+            }
+            for (c = 0; c < sparkles; c++) {
+                if (starv[c]) update_star(c);
+                if (tinyv[c]) update_tiny(c);
+            }
+            setTimeout(sparkle, 40);
+        }
 
-	/* Internet Explorer */
-	@-ms-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
+        function update_star(i) {
+            if (--starv[i] == 25) star[i].style.clip = "rect(1px, 4px, 4px, 1px)";
+            if (starv[i]) {
+                stary[i] += 1 + Math.random() * 3;
+                if (stary[i] < shigh + sdown) {
+                    star[i].style.top = stary[i] + "px";
+                    starx[i] += (i % 5 - 2) / 5;
+                    star[i].style.left = starx[i] + "px";
+                } else {
+                    star[i].style.visibility = "hidden";
+                    starv[i] = 0;
+                    return;
+                }
+            } else {
+                tinyv[i] = 50;
+                tiny[i].style.top = tinyy[i] = stary[i] + "px";
+                tiny[i].style.left = tinyx[i] = starx[i] + "px";
+                tiny[i].style.width = "2px";
+                tiny[i].style.height = "2px";
+                star[i].style.visibility = "hidden";
+                tiny[i].style.visibility = "visible";
+            }
+        }
 
-	/* Standar Syntax */
-	@keyframes  rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
-	</style>
+        function update_tiny(i) {
+            if (--tinyv[i] == 25) {
+                tiny[i].style.width = "1px";
+                tiny[i].style.height = "1px";
+            }
+            if (tinyv[i]) {
+                tinyy[i] += 1 + Math.random() * 3;
+                if (tinyy[i] < shigh + sdown) {
+                    tiny[i].style.top = tinyy[i] + "px";
+                    tinyx[i] += (i % 5 - 2) / 5;
+                    tiny[i].style.left = tinyx[i] + "px";
+                } else {
+                    tiny[i].style.visibility = "hidden";
+                    tinyv[i] = 0;
+                    return;
+                }
+            } else tiny[i].style.visibility = "hidden";
+        }
 
-	<script>
-	var colour="random";
-		var sparkles=50;
+        document.onmousemove = function(event) {
+            set_scroll();
+            y = event.pageY;
+            x = event.pageX;
+        }
 
-		var x=ox=400;
-		var y=oy=300;
-		var swide=800;
-		var shigh=600;
-		var sleft=sdown=0;
-		var tiny=new Array();
-		var star=new Array();
-		var starv=new Array();
-		var starx=new Array();
-		var stary=new Array();
-		var tinyx=new Array();
-		var tinyy=new Array();
-		var tinyv=new Array();
+        window.onscroll = set_scroll;
+        function set_scroll() {
+            if (typeof(self.pageYOffset) == 'number') {
+                sdown = self.pageYOffset;
+                sleft = self.pageXOffset;
+            } else if (document.body.scrollTop || document.body.scrollLeft) {
+                sdown = document.body.scrollTop;
+                sleft = document.body.scrollLeft;
+            } else if (document.documentElement.scrollTop || document.documentElement.scrollLeft) {
+                sleft = document.documentElement.scrollLeft;
+                sdown = document.documentElement.scrollTop;
+            } else {
+                sdown = 0;
+                sleft = 0;
+            }
+        }
 
-		window.onload=function() { if (document.getElementById) {
-		  var i, rats, rlef, rdow;
-		  for (var i=0; i<sparkles; i++) {
-		    var rats=createDiv(3, 3);
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    document.body.appendChild(tiny[i]=rats);
-		    starv[i]=0;
-		    tinyv[i]=0;
-		    var rats=createDiv(5, 5);
-		    rats.style.backgroundColor="transparent";
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    var rlef=createDiv(1, 5);
-		    var rdow=createDiv(5, 1);
-		    rats.appendChild(rlef);
-		    rats.appendChild(rdow);
-		    rlef.style.top="2px";
-		    rlef.style.left="0px";
-		    rdow.style.top="0px";
-		    rdow.style.left="2px";
-		    document.body.appendChild(star[i]=rats);
-		  }
-		  set_width();
-		  sparkle();
-		}}
+        window.onresize = set_width;
+        function set_width() {
+            if (typeof(self.innerWidth) == 'number') {
+                swide = self.innerWidth;
+                shigh = self.innerHeight;
+            } else if (document.documentElement.clientWidth || document.documentElement.clientHeight) {
+                swide = document.documentElement.clientWidth;
+                shigh = document.documentElement.clientHeight;
+            } else {
+                swide = document.body.clientWidth;
+                shigh = document.body.clientHeight;
+            }
+        }
 
-		function sparkle() {
-		  var c;
-		  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-		    ox=x;
-		    oy=y;
-		    for (c=0; c<sparkles; c++) if (!starv[c]) {
-		      star[c].style.left=(starx[c]=x)+"px";
-		      star[c].style.top=(stary[c]=y+1)+"px";
-		      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-		      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-		      star[c].style.visibility="visible";
-		      starv[c]=50;
-		      break;
-		    }
-		  }
-		  for (c=0; c<sparkles; c++) {
-		    if (starv[c]) update_star(c);
-		    if (tinyv[c]) update_tiny(c);
-		  }
-		  setTimeout("sparkle()", 40);
-		}
-
-		function update_star(i) {
-		  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-		  if (starv[i]) {
-		    stary[i]+=1+Math.random()*3;
-		    starx[i]+=(i%5-2)/5;
-		    if (stary[i]<shigh+sdown) {
-		      star[i].style.top=stary[i]+"px";
-		      star[i].style.left=starx[i]+"px";
-		    }
-		    else {
-		      star[i].style.visibility="hidden";
-		      starv[i]=0;
-		      return;
-		    }
-		  }
-		  else {
-		    tinyv[i]=50;
-		    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-		    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-		    tiny[i].style.width="2px";
-		    tiny[i].style.height="2px";
-		    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-		    star[i].style.visibility="hidden";
-		    tiny[i].style.visibility="visible"
-		  }
-		}
-
-		function update_tiny(i) {
-		  if (--tinyv[i]==25) {
-		    tiny[i].style.width="1px";
-		    tiny[i].style.height="1px";
-		  }
-		  if (tinyv[i]) {
-		    tinyy[i]+=1+Math.random()*3;
-		    tinyx[i]+=(i%5-2)/5;
-		    if (tinyy[i]<shigh+sdown) {
-		      tiny[i].style.top=tinyy[i]+"px";
-		      tiny[i].style.left=tinyx[i]+"px";
-		    }
-		    else {
-		      tiny[i].style.visibility="hidden";
-		      tinyv[i]=0;
-		      return;
-		    }
-		  }
-		  else tiny[i].style.visibility="hidden";
-		}
-
-		document.onmousemove=mouse;
-		function mouse(e) {
-		  if (e) {
-		    y=e.pageY;
-		    x=e.pageX;
-		  }
-		  else {
-		    set_scroll();
-		    y=event.y+sdown;
-		    x=event.x+sleft;
-		  }
-		}
-
-		window.onscroll=set_scroll;
-		function set_scroll() {
-		  if (typeof(self.pageYOffset)=='number') {
-		    sdown=self.pageYOffset;
-		    sleft=self.pageXOffset;
-		  }
-		  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-		    sdown=document.body.scrollTop;
-		    sleft=document.body.scrollLeft;
-		  }
-		  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-		    sleft=document.documentElement.scrollLeft;
-		    sdown=document.documentElement.scrollTop;
-		  }
-		  else {
-		    sdown=0;
-		    sleft=0;
-		  }
-		}
-
-		window.onresize=set_width;
-		function set_width() {
-		  var sw_min=999999;
-		  var sh_min=999999;
-		  if (document.documentElement && document.documentElement.clientWidth) {
-		    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-		    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-		  }
-		  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-		    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-		    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-		  }
-		  if (document.body.clientWidth) {
-		    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-		    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-		  }
-		  if (sw_min==999999 || sh_min==999999) {
-		    sw_min=800;
-		    sh_min=600;
-		  }
-		  swide=sw_min;
-		  shigh=sh_min;
-		}
-
-		function createDiv(height, width) {
-		  var div=document.createElement("div");
-		  div.style.position="absolute";
-		  div.style.height=height+"px";
-		  div.style.width=width+"px";
-		  div.style.overflow="hidden";
-		  return (div);
-		}
-
-		function newColour() {
-		  var c=new Array();
-		  c[0]=255;
-		  c[1]=Math.floor(Math.random()*256);
-		  c[2]=Math.floor(Math.random()*(256-c[1]/2));
-		  c.sort(function(){return (0.5 - Math.random());});
-		  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-		}
-	</script>
+        function createDiv(height, width) {
+            var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.height = height + "px";
+            div.style.width = width + "px";
+            div.style.overflow = "hidden";
+            return div;
+        }
+    </script>
 </head>
-	
-</body>
-	<div class="col-md-12" style="margin-top: 60px;">
-		
-		<div class="center">
-			<h4 class="hoa-title rainbow"><b>Corner Of Ligmas</b></h4>
-		</div>
-		
-		<div class="container" style="margin-top:20px;">
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="https://xyzzr.github.io/misc/hitler.png">
-				</div>
-				<div class="hoa-name rainbow">
-					Jutsou / Bingus
-				</div>
-				<div class="hoa-description">
-					<b>Big anus</b><br>
-					A real Ligma.<br>
-					The most insane person ever!?<br>
-				</div>
-			</div>
+<body>
+    <div class="rainbow">
+        <h1>Welcome to the Corner</h1>
+        <p>Here lies the antisocial rejects.</p>
+    </div>
 
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="https://xyzzr.github.io/misc/justdavid2.png">
-				</div>
-				<div class="hoa-name rainbow">
-					Justdavid2
-				</div>
-				<div class="hoa-description">
-					<b>Developer_Davidd</b><br>
-					DEFINITELY A LIGMA!!!<br>
-					Horrible roblox modeler & scripter.<br>
-					Uses chatgpt for simple functions.<br>
-				</div>
-			</div>
-			
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="https://doxbin.com/files/hoa/white/arion.jpg">
-				</div>
-				<div class="hoa-name rainbow">
-					Dizzy
-				</div>
-				<div class="hoa-description">
-					<b>dizzy_32</b><br>
-					Ultimate Ligma.<br>
-					HES AN AI GENERATED HUMAN BEING I SWEAR HES NOT REAL THERE I SNO WAY THAT HES REAL.<br>
-					Poopy mod.<br>
-				</div>
-			</div>
-			
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="https://doxbin.com/files/hoa/sleep/sl33py.jpg">
-				</div>
-				<div class="hoa-name rainbow">
-					SleepTheGod / igfilmsv2
-				</div>
-				<div class="hoa-description">
-					<b>Taylor Christian Newsome</b><br>
-					The 28 year old meth-snorting, roleplay hacker from the 2013+ XBOX scene.<br> 
-					From being a prominent name in the skid-hacking community, to becoming the white 'BeetleJuice' with meth teeth.<br>
-					Name-dropping people he doesn't know to act more important than he actually is.<br>
-					Flexes public JS/CSS files and thinks he hacked/rooted a website, yet only knows how to use automatic pentesting tools.<br>
-					<a href="/upload/SleepTheGod">Dox</a> | <a href="https://www.youtube.com/watch?v=DXK-rUloMa8">Meme</a>
-				</div>
-			</div>
+    <div class="center">
+        <div class="hoa-container">
+            <div class="hoa-image">
+                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+            </div>
+            <div class="hoa-name">Person's Name</div>
+            <div class="hoa-description">This is a description of the person.</div>
+        </div>
+
+        <div class="hoa-container">
+            <div class="hoa-image">
+                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+            </div>
+            <div class="hoa-name">Person's Name</div>
+            <div class="hoa-description">This is a description of the person.</div>
+        </div>
+
+        <div class="hoa-container">
+            <div class="hoa-image">
+                <img src="https://via.placeholder.com/200" alt="Placeholder Image">
+            </div>
+            <div class="hoa-name">Person's Name</div>
+            <div class="hoa-description">This is a description of the person.</div>
+        </div>
+    </div>
 </body>
 </html>
