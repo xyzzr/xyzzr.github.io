@@ -187,13 +187,22 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var audio = new Audio("https://xyzzr.github.io/misc/fixed.mp3");
+            var clickedOrPressed = false;
 
             document.addEventListener("click", function() {
                 audio.play();
+                if (!clickedOrPressed) {
+                    document.querySelector('.hoa-title').innerText = "Corner Of Shame";
+                    clickedOrPressed = true;
+                }
             });
 
             document.addEventListener("keypress", function() {
                 audio.play();
+                if (!clickedOrPressed) {
+                    document.querySelector('.hoa-title').innerText = "Corner Of Shame";
+                    clickedOrPressed = true;
+                }
             });
         });
     </script>
@@ -378,7 +387,7 @@
     </script>
 </head>
 <body>
-    <h1 class="hoa-title rainbow">Corner Of Shame</h1>
+    <h1 class="hoa-title rainbow">Click/Press Anything</h1>
     <div class="center">
         <div class="hoa-container">
             <div class="hoa-image">
