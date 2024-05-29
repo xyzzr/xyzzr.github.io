@@ -90,28 +90,40 @@
         });
 
         function loadComments() {
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
-            const commentList = document.getElementById('commentList');
-            commentList.innerHTML = '';
-            comments.forEach(comment => {
-                const commentDiv = document.createElement('div');
-                commentDiv.className = 'comment';
-                commentDiv.innerText = comment;
-                commentList.appendChild(commentDiv);
-            });
+            fetch('/comments')
+                .then(response => response.json())
+                .then(comments => {
+                    const commentList = document.getElementById('commentList');
+                    commentList.innerHTML = '';
+                    comments.forEach(comment => {
+                        const commentDiv = document.createElement('div');
+                        commentDiv.className = 'comment';
+                        commentDiv.innerText = comment;
+                        commentList.appendChild(commentDiv);
+                    });
+                })
+                .catch(error => console.error('Error loading comments:', error));
         }
 
         function addComment() {
             const commentInput = document.getElementById('commentInput');
             const comment = commentInput.value.trim();
             if (comment) {
-                let comments = JSON.parse(localStorage.getItem('comments')) || [];
-                comments.push(comment);
-                localStorage.setItem('comments', JSON.stringify(comments));
-                document.cookie = "commented=true; max-age=31536000"; // Set cookie for one year
-                commentInput.value = '';
-                loadComments();
-                checkCommented();
+                fetch('/comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ comment }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.cookie = "commented=true; max-age=31536000"; // stolen from doxbin since im sigma
+                    commentInput.value = '';
+                    loadComments();
+                    checkCommented();
+                })
+                .catch(error => console.error('Error adding comment:', error));
             }
         }
 
