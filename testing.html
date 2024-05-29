@@ -32,37 +32,6 @@
             color: #ccc;
             margin-bottom: 20px;
         }
-        .comments {
-            margin-top: 20px;
-        }
-        .comment {
-            background-color: #3c3c3c;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-        .comment-form {
-            display: flex;
-            flex-direction: column;
-        }
-        .comment-form textarea {
-            resize: none;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #555;
-            border-radius: 4px;
-            background-color: #2d2d2d;
-            color: #fff;
-        }
-        .comment-form button {
-            align-self: flex-end;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -73,68 +42,6 @@
             <p>Created: May 29th, 2024</p>
             <p>Created by: Clear</p>
         </div>
-        <div class="comments">
-            <h3>Comments:</h3>
-            <div id="commentList"></div>
-        </div>
-        <div class="comment-form">
-            <textarea id="commentInput" rows="4" placeholder="Add a comment..."></textarea>
-            <button id="submitComment" onclick="addComment()">Submit</button>
-        </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            checkCommented();
-            loadComments();
-        });
-
-        function loadComments() {
-            fetch('/comments')
-                .then(response => response.json())
-                .then(comments => {
-                    const commentList = document.getElementById('commentList');
-                    commentList.innerHTML = '';
-                    comments.forEach(comment => {
-                        const commentDiv = document.createElement('div');
-                        commentDiv.className = 'comment';
-                        commentDiv.innerText = comment;
-                        commentList.appendChild(commentDiv);
-                    });
-                })
-                .catch(error => console.error('Error loading comments:', error));
-        }
-
-        function addComment() {
-            const commentInput = document.getElementById('commentInput');
-            const comment = commentInput.value.trim();
-            if (comment) {
-                fetch('/comments', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ comment }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    document.cookie = "commented=true; max-age=31536000"; // stolen from doxbin since im sigma
-                    commentInput.value = '';
-                    loadComments();
-                    checkCommented();
-                })
-                .catch(error => console.error('Error adding comment:', error));
-            }
-        }
-
-        function checkCommented() {
-            const submitButton = document.getElementById('submitComment');
-            if (document.cookie.split(';').some((item) => item.trim().startsWith('commented='))) {
-                submitButton.disabled = true;
-                document.getElementById('commentInput').disabled = true;
-                submitButton.innerText = 'Comment Submitted';
-            }
-        }
-    </script>
 </body>
 </html>
