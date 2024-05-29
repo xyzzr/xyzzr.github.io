@@ -79,12 +79,13 @@
         </div>
         <div class="comment-form">
             <textarea id="commentInput" rows="4" placeholder="Add a comment..."></textarea>
-            <button onclick="addComment()">Submit</button>
+            <button id="submitComment" onclick="addComment()">Submit</button>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
+            checkCommented();
             loadComments();
         });
 
@@ -107,8 +108,19 @@
                 let comments = JSON.parse(localStorage.getItem('comments')) || [];
                 comments.push(comment);
                 localStorage.setItem('comments', JSON.stringify(comments));
+                document.cookie = "commented=true; max-age=31536000"; // Set cookie for one year
                 commentInput.value = '';
                 loadComments();
+                checkCommented();
+            }
+        }
+
+        function checkCommented() {
+            const submitButton = document.getElementById('submitComment');
+            if (document.cookie.split(';').some((item) => item.trim().startsWith('commented='))) {
+                submitButton.disabled = true;
+                document.getElementById('commentInput').disabled = true;
+                submitButton.innerText = 'Comment Submitted';
             }
         }
     </script>
