@@ -275,9 +275,3 @@ EmojiList.Visible = false
       end
    end
 end)
-game.StarterGui:SetCore("ChatMakeSystemMessage", {
-Text = "Emojis Loaded";
-Color = Color3.new(255,255,255);
-Font = Enum.Font.SourceSans;
-FontSize = Enum.FontSize.Size24;
-})
