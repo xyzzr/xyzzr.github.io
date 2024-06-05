@@ -15,6 +15,7 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
+            transition: opacity 1s ease;
         }
         #inputBox {
             background-color: black;
@@ -56,6 +57,9 @@
         #inputBox.active {
             border: 1px solid green;
         }
+        .hidden {
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +67,6 @@
     <p id="infoText">Prize pool: 6 Robux</p>
     <input type="text" id="inputBox" placeholder="Roblox/Discord username here.." oninput="checkInput()">
     <button id="sendButton" disabled onclick="sendMessage()">Send</button>
-
     <script>
         function checkInput() {
             const box = document.getElementById('inputBox');
@@ -82,7 +85,9 @@
             const message = `${box.value} - entered`;
             const url = 'https://discord.com/api/webhooks/1247937197366312960/qvEBtgJ6iKqWjqXngIX1jlIT0RSWu-g54OANj_HgePWWr6d1q15Kp8BT4NMT5OL5kG8J';
             const payload = JSON.stringify({ content: message });
-
+            const body = document.querySelector('body');
+            const sendButton = document.getElementById('sendButton');
+            sendButton.disabled = true;
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -92,7 +97,11 @@
             })
             .then(response => {
                 if (response.ok) {
-                    alert('Message sent successfully!');
+                    body.classList.add('hidden');
+                    setTimeout(() => {
+                        body.innerHTML = `<p>Thanks for entering, ${box.value}</p>`;
+                        body.classList.remove('hidden');
+                    }, 1000);
                 } else {
                     alert('Failed to send message.');
                 }
