@@ -29,6 +29,13 @@
         #inputBox:focus {
             outline: none;
         }
+        #warningText {
+            color: gray;
+            opacity: 0.7;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
         #infoText {
             margin-bottom: 10px;
             text-align: center;
@@ -52,6 +59,7 @@
     </style>
 </head>
 <body>
+    <p id="warningText">(spam the button or webhook and you will be IP blacklisted or not chosen, it doesn't boost your chances)</p>
     <p id="infoText">Prize pool: 6 Robux</p>
     <input type="text" id="inputBox" placeholder="Roblox/Discord username here.." oninput="checkInput()">
     <button id="sendButton" disabled onclick="sendMessage()">Send</button>
