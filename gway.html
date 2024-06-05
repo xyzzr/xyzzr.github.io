@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giveaway</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #inputBox {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            width: 300px;
+        }
+        #sendButton {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: not-allowed;
+        }
+        #sendButton:enabled {
+            background-color: green;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="inputBox" placeholder="Enter username here" oninput="checkInput()">
+        <button id="sendButton" disabled onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function checkInput() {
+            const inputBox = document.getElementById('inputBox');
+            const sendButton = document.getElementById('sendButton');
+            if (inputBox.value.trim() !== "") {
+                sendButton.disabled = false;
+            } else {
+                sendButton.disabled = true;
+            }
+        }
+
+        function sendMessage() {
+            const inputBox = document.getElementById('inputBox');
+            const message = `${inputBox.value} - entered`;
+            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk';
+            const payload = JSON.stringify({ content: message });
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: payload
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('thanks for entering lol');
+                } else {
+                    alert('fail');
+                }
+            })
+            .catch(error => {
+                console.error('(send to clear) debug:', error);
+            });
+        }
+    </script>
+</body>
+</html>
