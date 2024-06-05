@@ -60,6 +60,9 @@
         .hidden {
             opacity: 0;
         }
+        .error {
+            border: 1px solid red !important;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +90,9 @@
             const payload = JSON.stringify({ content: message });
             const body = document.querySelector('body');
             const sendButton = document.getElementById('sendButton');
+
             sendButton.disabled = true;
+
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -103,12 +108,25 @@
                         body.classList.remove('hidden');
                     }, 1000);
                 } else {
-                    alert('Failed to send message.');
+                    handleError(response.statusText);
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
+                handleError(error.message);
             });
+        }
+
+        function handleError(error) {
+            const box = document.getElementById('inputBox');
+            const body = document.querySelector('body');
+
+            box.classList.add('error');
+            body.classList.add('hidden');
+
+            setTimeout(() => {
+                body.innerHTML = `<p>Error happened: ${error}</p>`;
+                body.classList.remove('hidden');
+            }, 1000);
         }
     </script>
 </body>
