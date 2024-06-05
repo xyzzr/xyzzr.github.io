@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>giveaway</title>
+    <title>Webhook Sender</title>
     <style>
         body {
             background-color: black;
@@ -14,6 +14,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         #inputBox {
             background-color: black;
@@ -21,32 +22,39 @@
             border: 1px solid white;
             padding: 10px;
             width: 300px;
+            margin-bottom: 10px;
+        }
+        #infoText {
+            margin-bottom: 10px;
+            text-align: center;
         }
         #sendButton {
-            background-color: gray;
+            background-color: black;
             color: white;
-            border: none;
+            border: 1px solid white;
             padding: 10px 20px;
-            margin-left: 10px;
+            border-radius: 10px;
             cursor: not-allowed;
+            width: 300px;
         }
         #sendButton:enabled {
-            background-color: green;
+            background-color: black;
             cursor: pointer;
+            border: 1px solid green;
+            color: green;
         }
     </style>
 </head>
 <body>
-    <div>
-        <input type="text" id="inputBox" placeholder="Enter username here" oninput="checkInput()">
-        <button id="sendButton" disabled onclick="sendMessage()">Send</button>
-    </div>
+    <input type="text" id="inputBox" placeholder="Type something..." oninput="checkInput()">
+    <p id="infoText">Prize pool: 6 Robux (testing giveaway)</p>
+    <button id="sendButton" disabled onclick="sendMessage()">Send</button>
 
     <script>
         function checkInput() {
-            const inputBox = document.getElementById('inputBox');
+            const box = document.getElementById('inputBox');
             const sendButton = document.getElementById('sendButton');
-            if (inputBox.value.trim() !== "") {
+            if (box.value.trim() !== "") {
                 sendButton.disabled = false;
             } else {
                 sendButton.disabled = true;
@@ -54,12 +62,11 @@
         }
 
         function sendMessage() {
-            const inputBox = document.getElementById('inputBox');
-            const message = `${inputBox.value} - entered`;
-            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk';
+            const box = document.getElementById('inputBox');
+            const message = `${inputBox.value} - entered`; // pls stop looking at sourcecode
+            const link = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // pls stop looking at sourcecode
             const payload = JSON.stringify({ content: message });
-
-            fetch(webhookUrl, {
+            fetch(link, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -68,13 +75,13 @@
             })
             .then(response => {
                 if (response.ok) {
-                    alert('thanks for entering lol');
+                    alert('Message sent successfully!');
                 } else {
-                    alert('fail');
+                    alert('Failed to send message.');
                 }
             })
             .catch(error => {
-                console.error('(send to clear) debug:', error);
+                console.error('Error:', error);
             });
         }
     </script>
