@@ -24,6 +24,7 @@
             padding: 10px;
             width: 300px;
             margin-bottom: 10px;
+            text-align: center;
         }
         #inputBox:focus {
             outline: none;
@@ -70,7 +71,7 @@
 
         function sendMessage() {
             const box = document.getElementById('inputBox');
-            const message = `${inputBox.value} - entered`;
+            const message = `${box.value} - entered`;
             const url = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk';
             const payload = JSON.stringify({ content: message });
 
