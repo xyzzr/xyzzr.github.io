@@ -51,31 +51,30 @@
     </style>
 </head>
 <body>
-    <input type="text" id="inputBox" placeholder="Type something..." oninput="checkInput()">
-    <p id="infoText">Prize pool: 6 Robux (testing giveaway)</p>
+    <p id="infoText">Prize pool: 6 Robux</p>
+    <input type="text" id="inputBox" placeholder="RBX/DISCORD username here.." oninput="checkInput()">
     <button id="sendButton" disabled onclick="sendMessage()">Send</button>
 
     <script>
         function checkInput() {
-            const inputBox = document.getElementById('inputBox');
+            const box = document.getElementById('inputBox');
             const sendButton = document.getElementById('sendButton');
-            if (inputBox.value.trim() !== "") {
+            if (box.value.trim() !== "") {
                 sendButton.disabled = false;
-                inputBox.classList.add('active');
+                box.classList.add('active');
             } else {
                 sendButton.disabled = true;
-                inputBox.classList.remove('active');
+                box.classList.remove('active');
             }
         }
 
         function sendMessage() {
-            const inputBox = document.getElementById('inputBox');
+            const box = document.getElementById('inputBox');
             const message = `${inputBox.value} - entered`;
-            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // Replace with your webhook URL
-
+            const url = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk';
             const payload = JSON.stringify({ content: message });
 
-            fetch(webhookUrl, {
+            fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
