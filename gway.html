@@ -25,6 +25,9 @@
             width: 300px;
             margin-bottom: 10px;
         }
+        #inputBox:focus {
+            outline: none;
+        }
         #infoText {
             margin-bottom: 10px;
             text-align: center;
@@ -39,8 +42,10 @@
             width: 300px;
         }
         #sendButton:enabled {
-            background-color: black;
             cursor: pointer;
+            border: 1px solid green;
+        }
+        #inputBox.active {
             border: 1px solid green;
         }
     </style>
@@ -56,15 +61,17 @@
             const sendButton = document.getElementById('sendButton');
             if (inputBox.value.trim() !== "") {
                 sendButton.disabled = false;
+                inputBox.classList.add('active');
             } else {
                 sendButton.disabled = true;
+                inputBox.classList.remove('active');
             }
         }
 
         function sendMessage() {
             const inputBox = document.getElementById('inputBox');
             const message = `${inputBox.value} - entered`;
-            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // HI
+            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // Replace with your webhook URL
 
             const payload = JSON.stringify({ content: message });
 
