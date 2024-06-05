@@ -20,6 +20,7 @@
             background-color: black;
             color: white;
             border: 1px solid white;
+            border-radius: 10px;
             padding: 10px;
             width: 300px;
             margin-bottom: 10px;
@@ -41,7 +42,6 @@
             background-color: black;
             cursor: pointer;
             border: 1px solid green;
-            color: green;
         }
     </style>
 </head>
@@ -52,9 +52,9 @@
 
     <script>
         function checkInput() {
-            const box = document.getElementById('inputBox');
+            const inputBox = document.getElementById('inputBox');
             const sendButton = document.getElementById('sendButton');
-            if (box.value.trim() !== "") {
+            if (inputBox.value.trim() !== "") {
                 sendButton.disabled = false;
             } else {
                 sendButton.disabled = true;
@@ -62,11 +62,13 @@
         }
 
         function sendMessage() {
-            const box = document.getElementById('inputBox');
-            const message = `${inputBox.value} - entered`; // pls stop looking at sourcecode
-            const link = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // pls stop looking at sourcecode
+            const inputBox = document.getElementById('inputBox');
+            const message = `${inputBox.value} - entered`;
+            const webhookUrl = 'https://discord.com/api/webhooks/1247928749878677516/etcCnZL9OIyb30ZnF23EF3iyWiGA4_D3bDAH59DNkjaovw6n3C_K2oJshHU2g8nlw5Lk'; // HI
+
             const payload = JSON.stringify({ content: message });
-            fetch(link, {
+
+            fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
