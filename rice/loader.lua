@@ -1,4 +1,9 @@
 --[[
+
+OMG NO RATS!?
+NO LOGGERS!?
+WHATTTT THIS IS UNHEARD OF!
+
 CHANGELOG
 
 6/25/2024: 5:32PM
@@ -6,15 +11,6 @@ Fixed bald command
 Fixed discord invite button
 Fixed fly
 ]]
-
-if game.Players.LocalPlayer.UserId == 1 -- i hate roblox
-or game.Players.LocalPlayer.UserId == 2 -- gionhpapå
-   then
-  game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true;
- game.Players.LocalPlayer:Kick("a")
-end
-
-
 
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/xsyhfs.lua"))()
