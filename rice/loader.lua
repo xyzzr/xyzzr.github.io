@@ -7,4 +7,707 @@ Fixed discord invite button
 Fixed fly
 ]]
 
-([[This file was protected with MoonSec V3]]):gsub('.+', (function(a) _AvaHmvlootYu = a; end)); return(function(a,...)local p;local d;local o;local f;local r;local t;local e=24915;local n=0;local l={};while n<313 do n=n+1;while n<0x21d and e%0x38fa<0x1c7d do n=n+1 e=(e*123)%22522 local c=n+e if(e%0x17ce)<0xbe7 then e=(e+0x99)%0x44b2 while n<0x9d and e%0x433e<0x219f do n=n+1 e=(e*309)%44554 local c=n+e if(e%0x3d30)>=0x1e98 then e=(e*0x296)%0x9cd2 local e=92351 if not l[e]then l[e]=0x1 t=getfenv and getfenv();end elseif e%2~=0 then e=(e-0x47)%0x3ba3 local e=46785 if not l[e]then l[e]=0x1 o=function(o)local e=0x01 local function l(n)e=e+n return o:sub(e-n,e-0x01)end while true do local n=l(0x01)if(n=="\5")then break end local e=r.byte(l(0x01))local e=l(e)if n=="\2"then e=d.hvcrmIPK(e)elseif n=="\3"then e=e~="\0"elseif n=="\6"then t[e]=function(e,n)return a(8,nil,a,n,e)end elseif n=="\4"then e=t[e]elseif n=="\0"then e=t[e][l(r.byte(l(0x01)))];end local n=l(0x08)d[n]=e end end end else e=(e+0x149)%0x770f n=n+1 local e=67601 if not l[e]then l[e]=0x1 f="\4\8\116\111\110\117\109\98\101\114\104\118\99\114\109\73\80\75\0\6\115\116\114\105\110\103\4\99\104\97\114\87\117\95\67\81\97\84\87\0\6\115\116\114\105\110\103\3\115\117\98\90\77\103\97\88\87\118\83\0\6\115\116\114\105\110\103\4\98\121\116\101\82\118\70\106\110\69\75\85\0\5\116\97\98\108\101\6\99\111\110\99\97\116\77\97\87\84\99\116\113\90\0\5\116\97\98\108\101\6\105\110\115\101\114\116\88\77\89\114\118\121\84\88\5";end end end elseif e%2~=0 then e=(e+0x1bf)%0x777e while n<0x2d2 and e%0x3e02<0x1f01 do n=n+1 e=(e*57)%7504 local o=n+e if(e%0xf86)>0x7c3 then e=(e-0x3ec)%0x689d local e=58981 if not l[e]then l[e]=0x1 end elseif e%2~=0 then e=(e*0x346)%0x574b local e=85250 if not l[e]then l[e]=0x1 p=tonumber;end else e=(e-0x11f)%0x4e7c n=n+1 local e=93984 if not l[e]then l[e]=0x1 t=(not t)and _ENV or t;end end end else e=(e+0x366)%0x60a5 n=n+1 while n<0xce and e%0x1156<0x8ab do n=n+1 e=(e-1008)%44411 local t=n+e if(e%0x2888)>0x1444 then e=(e+0x3b2)%0xc181 local e=55838 if not l[e]then l[e]=0x1 r=string;end elseif e%2~=0 then e=(e+0x207)%0xbba6 local e=65771 if not l[e]then l[e]=0x1 end else e=(e*0x39)%0x48b4 n=n+1 local e=32140 if not l[e]then l[e]=0x1 d={};end end end end end e=(e-165)%49554 end o(f);local n={};for e=0x0,0xff do local l=d.Wu_CQaTW(e);n[e]=l;n[l]=e;end local function c(e)return n[e];end local l=(function(f,o)local a,l=0x01,0x10 local n={{},{},{}}local t=-0x01 local e=0x01 local r=f while true do n[0x03][d.ZMgaXWvS(o,e,(function()e=a+e return e-0x01 end)())]=(function()t=t+0x01 return t end)()if t==(0x0f)then t=""l=0x000 break end end local t=#o while e<t+0x01 do n[0x02][l]=d.ZMgaXWvS(o,e,(function()e=a+e return e-0x01 end)())l=l+0x01 if l%0x02==0x00 then l=0x00 d.XMYrvyTX(n[0x01],(c((((n[0x03][n[0x02][0x00]]or 0x00)*0x10)+(n[0x03][n[0x02][0x01]]or 0x00)+r)%0x100)));r=f+r;end end return d.MaWTctqZ(n[0x01])end);o(l(108,"o(}hLdS#q1WPe:)311"));o(l(213,"FVSz4pfor3+=x8MGS=pxG4S}43f=3==GroVS4MoV3G=4MxJoS4oz+o=4G3=fMSor3f=GGpS2pzf838xpGpV+zIrpzrfoG8S+4xox+88VMoBGproVr+8Mk4=xM8rp=V8+GxSxpbV3+xx=/3Szpzfxrx8f-pz+4VpG=VfM38zVp?rM+8op oS+pf34=o=pM4zS4IoVxSMMVoxMPV3z=DM+NMzVf=rzxV83mpz+pM3+3oG4t4S2fxoJ+3rt+MSrfSr=xoM8V=co4ro=+G8fGSS34Mrsp=rfS4z3fx+S=xGzSrz=o3+zxp8S=z884:rfxfaSVxpofM++x=rM=8p4o++38pGMS7pEo4ro+r8zSxppfp+p+M3hx_p+oS3M8zGoxzp8rV+Mx+GoS+pzp+rG8h0rI+p+fw4fozm8zVpMo++o8+G3_8pSfz398S-f%xGfSS=rMp,ozofrrG3V8+V+zxz3oo=oo=+r4_p8rG=z8xVrz=4xr+xfG4G_z4ffSopfM+J34offSM=+M=V344oSoM+Sx4VxSfo=3G+Grr"));local e=(-1044+(function()local l,n=0,1;(function(e)e(e(e))end)(function(e)if l>373 then return e end l=l+1 n=(n-835)%49299 if(n%424)<=212 then n=(n-110)%46173 return e else return e(e(e))end return e(e(e))end)return n;end)())local u=d._HbHJajE or d.iEOerInI;local le=(getfenv)or(function()return _ENV end);local t=2;local h=4;local _=1;local o=3;local function ne(s,...)local f=l(e,"km)>0+p7y{Z-}*BN0p7B-*N}>}ym-{Ny>7-B){pyZ>-{mpp0>_7yZ*B})-*pmy0{y-*{m{+py}*URyBm)>+B{**}y)--zp>*my7*{+*0m>ZpN{>{y)pBN>>+77ZNZ{>Npy-{Z+>07+-mN+)+p)-)B))Vm--mB))}+N+p}))>p)ZY}0m++)0B}>*NB}>7p{ZyB7y+ZpmZ00pZ}Bmp0-y*}}m6>0yN+Z-{*7mp++N}07yp}mH>:{>*7}N})}7*-*B*){pN->-))p7mZBZN>m+N-0Z-)*0)Z_B}mN)}ymB)-0q->m7FZN>-{}*-m{>*yB}-Yp>{{{*pd}+hyy*>B707ym}db 0y+Z}}D-0ym++0{>*))9+fyN}BR*+py-}Z%{0{y7}pz++pyB})Hm0Eyp-BN*>}y**>N{>y77--N+>07>*yEy>1pNZBN>)}p}ZZB*)yp-ZBB+)0p>ZyBm)m+NZ)B+m}+-{ZB:my+y{p*+))+>{)*mmm0NyB}*mBp#yZ}{xy0{yp}+l0++yB}mgm>Nym-*N}>-{Z}0Ny>y7p-pN0>07)}>Np)N7mZ*N))-pZZ{By>7ppZpB0)pp)ZmBjmNp-{**}m-+Z{{*Zm7+p{p*0m>+){)*Kmw0By**yY-0Zy{}{670py+}0");local n=0;d.tchejdOy(function()d.coyatsjL()n=n+1 end)local function e(e,l)if l then return n end;n=e+n;end local l,n,c=a(0,a,e,f,d.RvFjnEKU);local function r()local l,n=d.RvFjnEKU(f,e(1,3),e(5,6)+2);e(2);return(n*256)+l;end;local y=true;local y=0 local function b()local e=n();local n=n();local o=1;local t=(l(n,1,20)*(2^32))+e;local e=l(n,21,31);local n=((-1)^l(n,32));if(e==0)then if(t==y)then return n*0;else e=1;o=0;end;elseif(e==2047)then return(t==0)and(n*(1/0))or(n*(0/0));end;return d.CGjMSyzx(n,e-1023)*(o+(t/(2^52)));end;local m=n;local function k(n)local l;if(not n)then n=m();if(n==0)then return'';end;end;l=d.ZMgaXWvS(f,e(1,3),e(5,6)+n-1);e(n)local e=""for n=(1+y),#l do e=e..d.ZMgaXWvS(l,n,n)end return e;end;local y=#d.OEEsqVkI(p('\49.\48'))~=1 local e=n;local function z(...)return{...},d.lRevyJcj('#',...)end local function ee()local a={};local u={};local e={};local p={u,a,nil,e};local e=n()local f={}for t=1,e do local l=c();local e;if(l==0)then e=(c()~=#{});elseif(l==3)then local n=b();if y and d.VKjnxTGn(d.OEEsqVkI(n),'.(\48+)$')then n=d.SLCpOyrW(n);end e=n;elseif(l==1)then e=k();end;f[t]=e;end;for e=1,n()do a[e-(#{1})]=ee();end;for p=1,n()do local e=c();if(l(e,1,1)==0)then local d=l(e,2,3);local a=l(e,4,6);local e={r(),r(),nil,nil};if(d==0)then e[o]=r();e[h]=r();elseif(d==#{1})then e[o]=n();elseif(d==s[2])then e[o]=n()-(2^16)elseif(d==s[3])then e[o]=n()-(2^16)e[h]=r();end;if(l(a,1,1)==1)then e[t]=f[e[t]]end if(l(a,2,2)==1)then e[o]=f[e[o]]end if(l(a,3,3)==1)then e[h]=f[e[h]]end u[p]=e;end end;p[3]=c();return p;end;local function ne(l,e,n)local t=e;local t=n;return p(d.VKjnxTGn(d.VKjnxTGn(({d.tchejdOy(l)})[2],e),n))end local function te(y,e,f)local function ee(...)local r,ee,p,k,s,n,c,j,m,b,g,l;local e=0;while-1<e do if 2<e then if 4>=e then if e<4 then j={};m={...};else b=d.lRevyJcj('#',...)-1;g={};end else if e==5 then l=a(7);else e=-2;end end else if 1<=e then if e>-3 then for l=46,83 do if e<2 then p=a(6,65,3,38,y);s=z k=0;break;end;n=-41;c=-1;break;end;else p=a(6,65,3,38,y);s=z k=0;end else r=a(6,44,1,99,y);ee=a(6,32,2,62,y);end end e=e+1;end;for e=0,b do if(e>=p)then j[e-p]=m[e+1];else l[e]=m[e+1];end;end;local e=b-p+1 local e;local d;local function a(...)while true do end end while true do if n<-40 then n=n+42 end e=r[n];d=e[_];if d>=12 then if d>17 then if 21>d then if 19<=d then if 16<=d then repeat if 20~=d then n=e[o];break;end;local e=e[t]l[e]=l[e](u(l,e+1,c))until true;else local e=e[t]l[e]=l[e](u(l,e+1,c))end else local n=e[t]local t,e=s(l[n](u(l,n+1,e[o])))c=e+n-1 local e=0;for n=n,c do e=e+1;l[n]=t[e];end;end else if 21<d then if 23~=d then l[e[t]]();else l[e[t]]=(e[o]~=0);end else l[e[t]]=f[e[o]];end end else if 14<d then if d>=16 then if 13<d then repeat if 16<d then do return end;break;end;l[e[t]]=f[e[o]];until true;else do return end;end else l(e[t],e[o]);end else if d<13 then local a,z,y,k,b,m,g,d,j,_,p;l[e[t]]=f[e[o]];n=n+1;e=r[n];a=e[t];z=l[e[o]];l[a+1]=z;l[a]=z[e[h]];n=n+1;e=r[n];d=0;while d>-1 do if 2<d then if d<=4 then if 0<d then repeat if d~=3 then g=y[k];break;end;m=y[b];until true;else m=y[b];end else if d==6 then d=-2;else l(g,m);end end else if d<1 then y=e;else if d>=-1 then repeat if d~=1 then b=o;break;end;k=t;until true;else k=t;end end end d=d+1 end n=n+1;e=r[n];a=e[t]j,_=s(l[a](u(l,a+1,e[o])))c=_+a-1 p=0;for e=a,c do p=p+1;l[e]=j[p];end;n=n+1;e=r[n];a=e[t]l[a]=l[a](u(l,a+1,c))n=n+1;e=r[n];l[e[t]]();n=n+1;e=r[n];do return end;else if 12<d then for n=34,56 do if d>13 then do return end;break;end;local n=e[t]local t,e=s(l[n](u(l,n+1,e[o])))c=e+n-1 local e=0;for n=n,c do e=e+1;l[n]=t[e];end;break;end;else do return end;end end end end else if 6<=d then if 9>d then if d>6 then if 5<=d then repeat if d>7 then n=e[o];break;end;local n=e[t];local t=l[e[o]];l[n+1]=t;l[n]=t[e[h]];until true;else n=e[o];end else local r,d,f,c,a;local n=0;while n>-1 do if n>=3 then if 5>n then if n<4 then c=r[f];else a=r[d];end else if n>1 then for e=29,53 do if 5<n then n=-2;break;end;l(a,c);break;end;else n=-2;end end else if n>0 then if-3<=n then repeat if 1~=n then f=o;break;end;d=t;until true;else d=t;end else r=e;end end n=n+1 end end else if 10>d then if(l[e[t]]==e[h])then n=n+1;else n=e[o];end;else if d>8 then repeat if 10~=d then local t=e[t];local n=l[e[o]];l[t+1]=n;l[t]=n[e[h]];break;end;for d=0,3 do if 2>d then if-3~=d then repeat if d~=1 then l[e[t]]=(e[o]~=0);n=n+1;e=r[n];break;end;f[e[o]]=l[e[t]];n=n+1;e=r[n];until true;else f[e[o]]=l[e[t]];n=n+1;e=r[n];end else if d>=1 then for a=31,55 do if 3~=d then l[e[t]]=f[e[o]];n=n+1;e=r[n];break;end;if(l[e[t]]==e[h])then n=n+1;else n=e[o];end;break;end;else l[e[t]]=f[e[o]];n=n+1;e=r[n];end end end until true;else for d=0,3 do if 2>d then if-3~=d then repeat if d~=1 then l[e[t]]=(e[o]~=0);n=n+1;e=r[n];break;end;f[e[o]]=l[e[t]];n=n+1;e=r[n];until true;else f[e[o]]=l[e[t]];n=n+1;e=r[n];end else if d>=1 then for a=31,55 do if 3~=d then l[e[t]]=f[e[o]];n=n+1;e=r[n];break;end;if(l[e[t]]==e[h])then n=n+1;else n=e[o];end;break;end;else l[e[t]]=f[e[o]];n=n+1;e=r[n];end end end end end end else if d<3 then if d>=1 then if d>=-3 then repeat if 1<d then l[e[t]]=(e[o]~=0);break;end;if(l[e[t]]==e[h])then n=n+1;else n=e[o];end;until true;else l[e[t]]=(e[o]~=0);end else f[e[o]]=l[e[t]];end else if 3>=d then local e=e[t]l[e]=l[e](u(l,e+1,c))else if d>=3 then for n=16,91 do if 5>d then f[e[o]]=l[e[t]];break;end;l[e[t]]();break;end;else f[e[o]]=l[e[t]];end end end end end n=1+n;end;end;return ee end;local o=0xff;local c={};local f=(1);local t='';(function(n)local l=n local r=0x00 local e=0x00 l={(function(d)if r>0x2e then return d end r=r+1 e=(e+0x1380-d)%0x45 return(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x82);end return true end)'iovsX'and l[0x2](0x3a6+d))or(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x12);o[2]=(o[2]*(ne(function()c()end,u(t))-ne(o[1],u(t))))+1;c[f]={};o=o[2];f=f+o;end return true end)'jYHTD'and l[0x3](d+0x164))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x5a);end return true end)'RCxDs'and l[0x1](d+0x1dc))or d end),(function(a)if r>0x2a then return a end r=r+1 e=(e+0x96c-a)%0x20 return(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x93);t={t..'\58 a',t};c[f]=ee();f=f+((not d.ZgWImvXr)and 1 or 0);t[1]='\58'..t[1];o[2]=0xff;end return true end)'LGDZn'and l[0x1](0x168+a))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0xe1);end return true end)'Li_CD'and l[0x3](a+0x1da))or(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x7c);end return true end)'QCKdQ'and l[0x2](a+0x11f))or a end),(function(d)if r>0x2f then return d end r=r+1 e=(e+0x5f3-d)%0x20 return(e%0x03==0x2 and(function(l)if not n[l]then e=e+0x01 n[l]=(0xa8);end return true end)'onbhi'and l[0x1](0x3bd+d))or(e%0x03==0x1 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x38);t='\37';o={function()o()end};t=t..'\100\43';end return true end)'FXHwx'and l[0x2](d+0x37f))or(e%0x03==0x0 and(function(l)if not n[l]then e=e+0x01 n[l]=(0x78);c[f]=le();f=f+o;end return true end)'MkWOE'and l[0x3](d+0x89))or d end)}l[0x3](0x1f4)end){};local e=te(u(c));return e(...);end return ne((function()local n={}local e=0x01;local l;if d.ZgWImvXr then l=d.ZgWImvXr(ne)else l=''end if d.VKjnxTGn(l,d.mXUsaOxs)then e=e+0;else e=e+1;end n[e]=0x02;n[n[e]+0x01]=0x03;return n;end)(),...)end)((function(l,e,n,o,t,d)local d;if 4>l then if 1>=l then if-2~=l then repeat if l~=1 then do return e(1),e(4,t,o,n,e),e(5,t,o,n)end;break;end;do return function(n,e,l)if l then local e=(n/2^(e-1))%2^((l-1)-(e-1)+1);return e-e%1;else local e=2^(e-1);return(n%(e+e)>=e)and 1 or 0;end;end;end;until true;else do return e(1),e(4,t,o,n,e),e(5,t,o,n)end;end else if 1<l then repeat if l~=2 then do return e(1),e(4,t,o,n,e),e(5,t,o,n)end;break;end;do return 16777216,65536,256 end;until true;else do return 16777216,65536,256 end;end end else if l<=5 then if 4==l then local l=o;local d,o,t=t(2);do return function()local e,r,n,f=e(n,l(l,l),l(l,l)+3);l(4);return(f*d)+(n*o)+(r*t)+e;end;end;else local l=o;do return function()local e=e(n,l(l,l),l(l,l));l(1);return e;end;end;end else if l<7 then do return t[n]end;else if l>=6 then for e=42,79 do if 8>l then do return setmetatable({},{['__\99\97\108\108']=function(e,l,o,t,n)if n then return e[n]elseif t then return e else e[l]=o end end})end break;end;do return n(l,nil,n);end break;end;else do return n(l,nil,n);end end end end end end),...)
+if game.Players.LocalPlayer.UserId == 1 -- i hate roblox
+or game.Players.LocalPlayer.UserId == 2 -- gionhpapå
+   then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true;
+ game.Players.LocalPlayer:Kick("a")
+end
+
+
+
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/xsyhfs.lua"))()
+local version = "1.5"
+local Wm = library:Watermark("Rice admin | v" .. version)
+local Notif = library:InitNotifications()
+
+library.title = "Rice admin"
+library:Introduction()
+wait(1)
+local Init = library:Init()
+local Tab1 = Init:NewTab("Main")
+local Tab2 = Init:NewTab("Misc")
+--[[ FUNCTIONS ]]--
+
+local Players = game:GetService("Players")
+function splitString(str,delim)
+    local broken = {}
+    if delim == nil then delim = "," end
+    for w in string.gmatch(str,"[^"..delim.."]+") do
+        table.insert(broken,w)
+    end
+    return broken
+end
+function toTokens(str)
+    local tokens = {}
+    for op,name in string.gmatch(str,"([+-])([^+-]+)") do
+        table.insert(tokens,{Operator = op,Name = name})
+    end
+    return tokens
+end
+function getRoot(char)
+    local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+    return rootPart
+end
+local WTS = function(Object)
+    local ObjectVector = workspace.CurrentCamera:WorldToScreenPoint(Object.Position)
+    return Vector2.new(ObjectVector.X, ObjectVector.Y)
+end
+local mouse = Players.LocalPlayer:GetMouse()
+local MousePositionToVector2 = function()
+    return Vector2.new(mouse.X, mouse.Y)
+end
+local GetClosestPlayerFromCursor = function()
+    local found = nil
+    local ClosestDistance = math.huge
+    for i, v in pairs(Players:GetPlayers()) do
+        if v ~= Players.LocalPlayer and v.Character and v.Character:FindFirstChildOfClass("Humanoid") then
+            for k, x in pairs(v.Character:GetChildren()) do
+                if string.find(x.Name, "Torso") then
+                    local Distance = (WTS(x) - MousePositionToVector2()).Magnitude
+                    if Distance < ClosestDistance then
+                        ClosestDistance = Distance
+                        found = v
+                    end
+                end
+            end
+        end
+    end
+    return found
+end
+
+local SpecialPlayerCases = {
+    ["all"] = function(speaker) return Players:GetPlayers() end,
+    ["others"] = function(speaker)
+        local plrs = {}
+        for i,v in pairs(Players:GetPlayers()) do
+            if v ~= speaker then
+                table.insert(plrs,v)
+            end
+        end
+        return plrs
+    end,
+    ["me"] = function(speaker)return {speaker} end,
+    ["#(%d+)"] = function(speaker,args,currentList)
+        local returns = {}
+        local randAmount = tonumber(args[1])
+        local players = {unpack(currentList)}
+        for i = 1,randAmount do
+            if #players == 0 then break end
+            local randIndex = math.random(1,#players)
+            table.insert(returns,players[randIndex])
+            table.remove(players,randIndex)
+        end
+        return returns
+    end,
+    ["random"] = function(speaker,args,currentList)
+        local players = Players:GetPlayers()
+        local localplayer = Players.LocalPlayer
+        table.remove(players, table.find(players, localplayer))
+        return {players[math.random(1,#players)]}
+    end,
+    ["%%(.+)"] = function(speaker,args)
+        local returns = {}
+        local team = args[1]
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Team and string.sub(string.lower(plr.Team.Name),1,#team) == string.lower(team) then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["allies"] = function(speaker)
+        local returns = {}
+        local team = speaker.Team
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Team == team then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["enemies"] = function(speaker)
+        local returns = {}
+        local team = speaker.Team
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Team ~= team then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["team"] = function(speaker)
+        local returns = {}
+        local team = speaker.Team
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Team == team then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["nonteam"] = function(speaker)
+        local returns = {}
+        local team = speaker.Team
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Team ~= team then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["friends"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["nonfriends"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if not plr:IsFriendsWith(speaker.UserId) and plr ~= speaker then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["guests"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Guest then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["bacons"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Character:FindFirstChild('Pal Hair') or plr.Character:FindFirstChild('Kate Hair') then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["age(%d+)"] = function(speaker,args)
+        local returns = {}
+        local age = tonumber(args[1])
+        if not age == nil then return end
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.AccountAge <= age then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["nearest"] = function(speaker,args,currentList)
+        local speakerChar = speaker.Character
+        if not speakerChar or not getRoot(speakerChar) then return end
+        local lowest = math.huge
+        local NearestPlayer = nil
+        for _,plr in pairs(currentList) do
+            if plr ~= speaker and plr.Character then
+                local distance = plr:DistanceFromCharacter(getRoot(speakerChar).Position)
+                if distance < lowest then
+                    lowest = distance
+                    NearestPlayer = {plr}
+                end
+            end
+        end
+        return NearestPlayer
+    end,
+    ["farthest"] = function(speaker,args,currentList)
+        local speakerChar = speaker.Character
+        if not speakerChar or not getRoot(speakerChar) then return end
+        local highest = 0
+        local Farthest = nil
+        for _,plr in pairs(currentList) do
+            if plr ~= speaker and plr.Character then
+                local distance = plr:DistanceFromCharacter(getRoot(speakerChar).Position)
+                if distance > highest then
+                    highest = distance
+                    Farthest = {plr}
+                end
+            end
+        end
+        return Farthest
+    end,
+    ["group(%d+)"] = function(speaker,args)
+        local returns = {}
+        local groupID = tonumber(args[1])
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr:IsInGroup(groupID) then  
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["alive"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Character and plr.Character:FindFirstChildOfClass("Humanoid") and plr.Character:FindFirstChildOfClass("Humanoid").Health > 0 then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["dead"] = function(speaker,args)
+        local returns = {}
+        for _,plr in pairs(Players:GetPlayers()) do
+            if (not plr.Character or not plr.Character:FindFirstChildOfClass("Humanoid")) or plr.Character:FindFirstChildOfClass("Humanoid").Health <= 0 then
+                table.insert(returns,plr)
+            end
+        end
+        return returns
+    end,
+    ["rad(%d+)"] = function(speaker,args)
+        local returns = {}
+        local radius = tonumber(args[1])
+        local speakerChar = speaker.Character
+        if not speakerChar or not getRoot(speakerChar) then return end
+        for _,plr in pairs(Players:GetPlayers()) do
+            if plr.Character and getRoot(plr.Character) then
+                local magnitude = (getRoot(plr.Character).Position-getRoot(speakerChar).Position).magnitude
+                if magnitude <= radius then table.insert(returns,plr) end
+            end
+        end
+        return returns
+    end,
+    ["cursor"] = function(speaker)
+        local plrs = {}
+        local v = GetClosestPlayerFromCursor()
+        if v ~= nil then table.insert(plrs, v) end
+        return plrs
+    end,
+}
+
+function onlyIncludeInTable(tab,matches)
+    local matchTable = {}
+    local resultTable = {}
+    for i,v in pairs(matches) do matchTable[v.Name] = true end
+    for i,v in pairs(tab) do if matchTable[v.Name] then table.insert(resultTable,v) end end
+    return resultTable
+end
+
+function removeTableMatches(tab,matches)
+    local matchTable = {}
+    local resultTable = {}
+    for i,v in pairs(matches) do matchTable[v.Name] = true end
+    for i,v in pairs(tab) do if not matchTable[v.Name] then table.insert(resultTable,v) end end
+    return resultTable
+end
+
+function getPlayersByName(Name)
+    local Name,Len,Found = string.lower(Name),#Name,{}
+    for _,v in pairs(Players:GetPlayers()) do
+        if Name:sub(0,1) == '@' then
+            if string.sub(string.lower(v.Name),1,Len-1) == Name:sub(2) then
+                table.insert(Found,v)
+            end
+        else
+            if string.sub(string.lower(v.Name),1,Len) == Name or string.sub(string.lower(v.DisplayName),1,Len) == Name then
+                table.insert(Found,v)
+            end
+        end
+    end
+    return Found
+end
+function getPlayer(list,speaker)
+    if list == nil then return {speaker.Name} end
+    local nameList = splitString(list,",")
+    local foundList = {}
+    for _,name in pairs(nameList) do
+        if string.sub(name,1,1) ~= "+" and string.sub(name,1,1) ~= "-" then name = "+"..name end
+        local tokens = toTokens(name)
+        local initialPlayers = Players:GetPlayers()
+        for i,v in pairs(tokens) do
+            if v.Operator == "+" then
+                local tokenContent = v.Name
+                local foundCase = false
+                for regex,case in pairs(SpecialPlayerCases) do
+                    local matches = {string.match(tokenContent,"^"..regex.."$")}
+                    if #matches > 0 then
+                        foundCase = true
+                        initialPlayers = onlyIncludeInTable(initialPlayers,case(speaker,matches,initialPlayers))
+                    end
+                end
+                if not foundCase then
+                    initialPlayers = onlyIncludeInTable(initialPlayers,getPlayersByName(tokenContent))
+                end
+            else
+                local tokenContent = v.Name
+                local foundCase = false
+                for regex,case in pairs(SpecialPlayerCases) do
+                    local matches = {string.match(tokenContent,"^"..regex.."$")}
+                    if #matches > 0 then
+                        foundCase = true
+                        initialPlayers = removeTableMatches(initialPlayers,case(speaker,matches,initialPlayers))
+                    end
+                end
+                if not foundCase then
+                    initialPlayers = removeTableMatches(initialPlayers,getPlayersByName(tokenContent))
+                end
+            end
+        end
+        for i,v in pairs(initialPlayers) do table.insert(foundList,v) end
+    end
+    local foundNames = {}
+    for i,v in pairs(foundList) do table.insert(foundNames,v.Name) end
+    return foundNames
+end
+
+local supported = {
+    [6816975827] = true,
+    [4456880028] = true,
+    [5752297721] = true,
+    [7764872557] = true,
+    [3239849876] = true,
+    [7720943627] = true,
+    [10592754185] = true,
+    [4643061038] = true,
+    [9043532917] = true
+}
+
+if supported[game.PlaceId] then
+function Destroy(instance)
+    spawn(function()
+        game:GetService("ReplicatedStorage").DeleteCar:FireServer(instance)
+    end)
+end
+else
+print("Invalid gameID! this script might not work.")
+end
+
+
+
+-- ban
+function FindInTable(tbl,val)
+    if tbl == nil then return false end
+    for _,v in pairs(tbl) do
+        if v == val then return true end
+    end 
+    return false
+end
+local slockk = false
+local banned = {}
+Players.PlayerAdded:connect(function(plr)
+    if slockk then
+        Destroy(plr)
+    end
+    if FindInTable(banned, plr.UserId) then
+        Destroy(plr)
+    end
+end)
+
+
+
+
+
+function givehammer()
+local selectionbox = Instance.new("SelectionBox", workspace)
+local equipped = false
+local oldmouse = mouse.Icon
+local destroytool = Instance.new("Tool", Players.LocalPlayer:FindFirstChildOfClass("Backpack"))
+destroytool.RequiresHandle = false
+destroytool.Name = "Destruction Hammer"
+destroytool.ToolTip = "xyzzr was here!"
+destroytool.TextureId = "http://www.roblox.com/asset/?id=12223874"
+destroytool.CanBeDropped = false
+destroytool.Equipped:connect(function()
+    equipped = true
+    mouse.Icon = "rbxasset://textures\\HammerCursor.png"
+    while equipped do
+        selectionbox.Adornee = mouse.Target
+        wait()
+    end
+end)
+destroytool.Unequipped:connect(function()
+    equipped = false
+    selectionbox.Adornee = nil
+    mouse.Icon = oldmouse
+    print(oldmouse)
+end)
+destroytool.Activated:connect(function()
+    local explosion = Instance.new("Explosion", workspace)
+    explosion.BlastPressure = 0
+    explosion.BlastRadius = 0
+    explosion.DestroyJointRadiusPercent = 0
+    explosion.ExplosionType = Enum.ExplosionType.NoCraters
+    explosion.Position = mouse.Target.Position
+    Destroy(mouse.Target)
+end)
+game:GetService("StarterGui"):SetCoreGuiEnabled('Backpack', true)
+Players.LocalPlayer.CharacterAdded:connect(function()
+    local destroytool = Instance.new("Tool", Players.LocalPlayer:FindFirstChildOfClass("Backpack"))
+    destroytool.RequiresHandle = false
+    destroytool.Name = "Destruction Hammer"
+    destroytool.ToolTip = "xyzzr was here!"
+    destroytool.TextureId = "http://www.roblox.com/asset/?id=12223874"
+    destroytool.CanBeDropped = false
+    destroytool.Equipped:connect(function()
+        equipped = true
+        mouse.Icon = "rbxasset://textures\\HammerCursor.png"
+        while equipped do
+            selectionbox.Adornee = mouse.Target
+            wait()
+        end
+    end)
+    destroytool.Unequipped:connect(function()
+        equipped = false
+        selectionbox.Adornee = nil
+        mouse.Icon = oldmouse
+        print(oldmouse)
+    end)
+    destroytool.Activated:connect(function()
+        local explosion = Instance.new("Explosion", workspace)
+        explosion.BlastPressure = 0
+        explosion.BlastRadius = 0
+        explosion.DestroyJointRadiusPercent = 0
+        explosion.ExplosionType = Enum.ExplosionType.NoCraters
+        explosion.Position = mouse.Target.Position
+        Destroy(mouse.Target)
+    end)
+    game:GetService("StarterGui"):SetCoreGuiEnabled('Backpack', true)
+end)
+end
+
+-- [[ END OF FUNCTIONS ]] --
+
+_G.target = "others"
+
+local Selector1 = Tab1:NewSelector("Select Command", "[]", {"bald", "kick", "kill", "server ban", "goto", "server lock", "punish"}, function(d)
+    -- print(d) -- debug thingie
+if d == "bald" then -- bald cmd
+    local players = getPlayer(_G.target.Text, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        for i, v in pairs(Players[v].Character:GetChildren()) do
+            if v:IsA("Accessory") then
+                Destroy(v)
+            end
+        end
+    end
+elseif d == "kick" then
+local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        Destroy(Players[v])
+    end
+elseif d == "kill" then
+    print("ran")
+    local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        if Players[v].Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+            Destroy(Players[v].Character.Torso.Neck)
+        else
+            Destroy(Players[v].Character.Head.Neck)
+        end
+    end
+elseif d == "server ban" then
+    local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        table.insert(banned, Players[v].UserId)
+        Destroy(Players[v])
+    end
+elseif d == "goto" then -- goto
+local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        if Players[v].Character ~= nil then
+            if Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid') and Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').SeatPart then
+                Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = false
+                wait(.1)
+            end
+            getRoot(Players.LocalPlayer.Character).CFrame = getRoot(Players[v].Character).CFrame + Vector3.new(3,1,0)
+        end
+    end
+elseif d == "server lock" then -- serverlock
+        if slockk then 
+        slockk = false
+    else
+        slockk = true
+    end
+elseif d == "punish" then -- punish
+    local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        Destroy(Players[v].Character)
+    end
+end
+end)
+
+
+
+
+local Textbox2 = Tab1:NewTextbox("Select target", "", "displayname/username", "all", "medium", true, false, function(val)
+    _G.target = val
+end)
+
+local Label1 = Tab1:NewLabel("Localplayer", "left")
+
+local Button1 = Tab1:NewButton("Give Destruction Hammer", function()
+    givehammer()
+end)
+
+-- [[ flight ]] --
+
+local mt = getrawmetatable(game)
+local LocalPlayer = game.Players.LocalPlayer
+local Character = game.Players.LocalPlayer.Character
+local Workspace = game:GetService("Workspace")
+local hum = game.Players.LocalPlayer.Character
+local p = game:GetService("Players").LocalPlayer
+local speed = 50
+
+local c
+local h
+local bv
+local bav
+local cam
+local flying
+local p = game.Players.LocalPlayer
+local buttons = {
+        W = false,
+        S = false,
+        A = false,
+        D = false,
+        Moving = false
+}
+local yesfly = function ()
+        if not p.Character or not p.Character.Head or flying then
+                return
+        end
+        c = p.Character
+        h = c.Humanoid
+        h.PlatformStand = true
+        cam = workspace:WaitForChild('Camera')
+        bv = Instance.new("BodyVelocity")
+        bav = Instance.new("BodyAngularVelocity")
+        bv.Velocity, bv.MaxForce, bv.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000
+        bav.AngularVelocity, bav.MaxTorque, bav.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000
+        bv.Parent = c.Head
+        bav.Parent = c.Head
+        flying = true
+        h.Died:connect(function()
+                flying = false
+        end)
+end
+
+local nofly = function ()
+        if not p.Character or not flying then
+                return
+        end
+        h.PlatformStand = false
+        bv:Destroy()
+        bav:Destroy()
+        flying = false
+end
+
+game:GetService("UserInputService").InputBegan:connect(function (input, GPE)
+        if GPE then
+                return
+        end
+        for i, e in pairs(buttons) do
+                if i ~= "Moving" and input.KeyCode == Enum.KeyCode[i] then
+                        buttons[i] = true
+                        buttons.Moving = true
+                end
+        end
+end)
+
+
+
+game:GetService("UserInputService").InputEnded:connect(function (input, GPE)
+        if GPE then
+                return
+        end
+        local a = false
+        for i, e in pairs(buttons) do
+                if i ~= "Moving" then
+                        if input.KeyCode == Enum.KeyCode[i] then
+                                buttons[i] = false
+                        end
+                        if buttons[i] then
+                                a = true
+                        end
+                end
+        end
+        buttons.Moving = a
+end)
+
+local setVec = function (vec)
+        return vec * (speed / vec.Magnitude)
+end
+
+game:GetService("RunService").Heartbeat:connect(function (step)
+        if flying and c and c.PrimaryPart then
+                local p = c.PrimaryPart.Position
+                local cf = cam.CFrame
+                local ax, ay, az = cf:toEulerAnglesXYZ()
+                c:SetPrimaryPartCFrame(CFrame.new(p.x, p.y, p.z) * CFrame.Angles(ax, ay, az))
+                if buttons.Moving then
+                        local t = Vector3.new()
+                        if buttons.W then
+                                t = t + (setVec(cf.lookVector))
+                        end
+                        if buttons.S then
+                                t = t - (setVec(cf.lookVector))
+                        end
+                        if buttons.A then
+                                t = t - (setVec(cf.rightVector))
+                        end
+                        if buttons.D then
+                                t = t + (setVec(cf.rightVector))
+                        end
+                        c:TranslateBy(t * step)
+                end
+        end
+end)
+
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+local Toggled = value
+
+if Toggled then
+    Toggled = false
+    nofly()
+else
+    Toggled = true
+    yesfly()
+end
+
+Toggled = false
+nofly()
+
+-- [[ flight ]] --
+
+
+
+
+local Slider1 = Tab1:NewSlider("Fly speed", "", true, "/", {min = 1, max = 500, default = 50}, function(value)
+    speed = value
+end)
+
+local Toggle1 = Tab1:NewToggle("Toggle fly", false, function(value)
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+local Toggled = value
+
+if Toggled then
+    Toggled = true
+    yesfly()
+else
+    Toggled = false
+    nofly()
+end
+
+end):AddKeybind(Enum.KeyCode.F)
+
+-- [[ MISC ]] --
+
+
+local Label4 = Tab2:NewLabel("Made by xyzzr!", "left")
+local Button4 = Tab2:NewButton("Copy discord link", function()
+    setclipboard("discord.gg/jrD7F8aKHP")
+end)
+
+-- [[ END ]] --
+local FinishedLoading = Notif:Notify("Loaded rice admin!", 4, "success")
