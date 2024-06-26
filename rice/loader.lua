@@ -16,7 +16,16 @@ https://www.roblox.com/games/10592754185/BT-Drive-BETA
 https://www.roblox.com/games/4643061038/Car-Crash-Test
 
 
+known bugs
+more than 1 execution: fly bugs out
+fix: rejoin & execute only once
+
+
 CHANGELOG
+
+6/26/2024: 8:18PM
+Added remove limbs command
+Added nude command (wow)
 
 6/25/2024: 5:32PM
 Fixed bald command
@@ -487,8 +496,9 @@ end
 
 _G.target = "others"
 
-local Selector1 = Tab1:NewSelector("Select Command", "[]", {"bald", "kick", "kill", "server ban", "goto", "server lock", "punish"}, function(d)
+local Selector1 = Tab1:NewSelector("Select Command", "[]", {"bald", "kick", "kill", "server ban", "goto", "server lock", "punish", "nude", "remove limbs"}, function(d)
     -- print(d) -- debug thingie
+Notif:Notify("Ran command!", 4, "success")
 if d == "bald" then -- bald cmd
     local players = getPlayer(_G.target.Text, Players.LocalPlayer)
     for i, v in pairs(players) do
@@ -536,12 +546,39 @@ elseif d == "server lock" then -- serverlock
     else
         slockk = true
     end
+
 elseif d == "punish" then -- punish
     local players = getPlayer(_G.target, Players.LocalPlayer)
     for i, v in pairs(players) do
         Destroy(Players[v].Character)
+    end 
+
+elseif d == "nude" then -- nude
+    local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        Destroy(Players[v].Character:FindFirstChildOfClass("Pants"))
+        Destroy(Players[v].Character:FindFirstChildOfClass("Shirt"))
+        Destroy(Players[v].Character:FindFirstChildOfClass("ShirtGraphic"))
+    end
+
+elseif d == "remove limbs" then -- remove limbs (sigma)
+    local players = getPlayer(_G.target, Players.LocalPlayer)
+    for i, v in pairs(players) do
+        if Players[v].Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+            Destroy(Players[v].Character["Left Arm"])
+            Destroy(Players[v].Character["Left Leg"])
+            Destroy(Players[v].Character["Right Arm"])
+            Destroy(Players[v].Character["Right Leg"])
+        else
+            Destroy(Players[v].Character["LeftUpperArm"])
+            Destroy(Players[v].Character["LeftUpperLeg"])
+            Destroy(Players[v].Character["RightUpperArm"])
+            Destroy(Players[v].Character["RightUpperLeg"])
+        end
     end
 end
+
+
 end)
 
 
@@ -549,15 +586,17 @@ end)
 
 local Textbox2 = Tab1:NewTextbox("Select target", "", "displayname/username", "all", "medium", true, false, function(val)
     _G.target = val
+Notif:Notify("Target set to: " ..val, 4, "success")
 end)
 
 local Label1 = Tab1:NewLabel("Localplayer", "left")
 
 local Button1 = Tab1:NewButton("Give Destruction Hammer", function()
     givehammer()
+    Notif:Notify("Check ur inventory/backpack", 4, "success")
 end)
 
--- [[ flight ]] --
+-- [[ flight ]] -- i did NOT make this flight script!!!!! dk the guy who did
 
 local mt = getrawmetatable(game)
 local LocalPlayer = game.Players.LocalPlayer
@@ -700,9 +739,11 @@ local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local Toggled = value
 
 if Toggled then
+Notif:Notify("Toggled flight", 4, "success")
     Toggled = true
     yesfly()
 else
+Notif:Notify("Untoggled flight", 4, "success")
     Toggled = false
     nofly()
 end
@@ -715,7 +756,9 @@ end):AddKeybind(Enum.KeyCode.F)
 local Label4 = Tab2:NewLabel("Made by xyzzr!", "left")
 local Button4 = Tab2:NewButton("Copy discord link", function()
     setclipboard("discord.gg/jrD7F8aKHP")
+    Notif:Notify("Check your clipboard!", 4, "success")
 end)
+
 
 -- [[ END ]] --
 local FinishedLoading = Notif:Notify("Loaded rice admin!", 4, "success")
