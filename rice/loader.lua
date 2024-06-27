@@ -29,7 +29,6 @@ Added nude command (wow)
 
 6/25/2024: 5:32PM
 Fixed bald command
-Fixed discord invite button
 Fixed fly
 ]]
 
@@ -754,11 +753,6 @@ end):AddKeybind(Enum.KeyCode.F)
 
 
 local Label4 = Tab2:NewLabel("Made by xyzzr!", "left")
-local Button4 = Tab2:NewButton("Copy discord link", function()
-    setclipboard("discord.gg/jrD7F8aKHP")
-    Notif:Notify("Check your clipboard!", 4, "success")
-end)
-
 
 -- [[ END ]] --
 local FinishedLoading = Notif:Notify("Loaded rice admin!", 4, "success")
