@@ -23,8 +23,8 @@ getgenv().boboware = {}
 
 -- stuff
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/C/main/aimbot.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/C/main/wall.lua"))()
+loadstring(game:HttpGet("https://xyzzr.github.io/roblox/boboware/aimbot.lua"))()
+loadstring(game:HttpGet("https://xyzzr.github.io/roblox/boboware/esp.lua"))()
 
 -- variables
 
