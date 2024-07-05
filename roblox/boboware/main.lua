@@ -1,9 +1,10 @@
 --[[
 
-                      > boboware by xyzzr © CC0 1.0 Universal (2024) <
+                      > boboware by xyzzr Â© CC0 1.0 Universal (2024) <
     > Licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License. <
 
 ]]
+
 
 
 
@@ -39,7 +40,7 @@ Library.UnloadCallback = function()
 	WallHack.Functions:Exit()
 	getgenv().boboware = nil
 end
-
+-- AB26FF
 local MainFrame = Library:CreateWindow({
 	Name = "boboware",
 	Themeable = {
@@ -48,13 +49,17 @@ local MainFrame = Library:CreateWindow({
 		Credit = false
 	},
 	Background = "",
-	Theme = [[{"__Designer.Colors.topGradient":"3F0C64","__Designer.Colors.section":"C259FB","__Designer.Colors.hoveredOptionBottom":"4819B4","__Designer.Background.ImageAssetID":"rbxassetid://4427304036","__Designer.Colors.selectedOption":"4E149C","__Designer.Colors.unselectedOption":"482271","__Designer.Files.WorkspaceFile":"AirHub","__Designer.Colors.unhoveredOptionTop":"310269","__Designer.Colors.outerBorder":"391D57","__Designer.Background.ImageColor":"69009C","__Designer.Colors.tabText":"B9B9B9","__Designer.Colors.elementBorder":"160B24","__Designer.Background.ImageTransparency":100,"__Designer.Colors.background":"1E1237","__Designer.Colors.innerBorder":"531E79","__Designer.Colors.bottomGradient":"361A60","__Designer.Colors.sectionBackground":"21002C","__Designer.Colors.hoveredOptionTop":"6B10F9","__Designer.Colors.otherElementText":"7B44A8","__Designer.Colors.main":"AB26FF","__Designer.Colors.elementText":"9F7DB5","__Designer.Colors.unhoveredOptionBottom":"3E0088","__Designer.Background.UseBackgroundImage":false}]]
+	Theme = [[{"__Designer.Colors.topGradient":"3F0C64","__Designer.Colors.section":"C259FB","__Designer.Colors.hoveredOptionBottom":"4819B4","__Designer.Background.ImageAssetID":"rbxassetid://4427304036","__Designer.Colors.selectedOption":"4E149C","__Designer.Colors.unselectedOption":"482271","__Designer.Files.WorkspaceFile":"boboware","__Designer.Colors.unhoveredOptionTop":"310269","__Designer.Colors.outerBorder":"391D57","__Designer.Background.ImageColor":"69009C","__Designer.Colors.tabText":"B9B9B9","__Designer.Colors.elementBorder":"160B24","__Designer.Background.ImageTransparency":100,"__Designer.Colors.background":"1E1237","__Designer.Colors.innerBorder":"531E79","__Designer.Colors.bottomGradient":"361A60","__Designer.Colors.sectionBackground":"21002C","__Designer.Colors.hoveredOptionTop":"6B10F9","__Designer.Colors.otherElementText":"7B44A8","__Designer.Colors.main":"AB26FF","__Designer.Colors.elementText":"9F7DB5","__Designer.Colors.unhoveredOptionBottom":"3E0088","__Designer.Background.UseBackgroundImage":false}]]
 })
 
 -- tabs
 
 local AimbotTab = MainFrame:CreateTab({
 	Name = "Aimbot"
+})
+
+local PlayersTab = MainFrame:CreateTab({
+	Name = "Player"
 })
 
 local VisualsTab = MainFrame:CreateTab({
@@ -91,6 +96,21 @@ local FOV_Values = AimbotTab:CreateSection({
 local FOV_Appearance = AimbotTab:CreateSection({
 	Name = "FOV Circle Appearance",
 	Side = "Right"
+})
+
+-- player stuff
+
+local playermods = PlayersTab:CreateSection({
+	Name = "Player modding"
+})
+
+local trolling = PlayersTab:CreateSection({
+	Name = "Trolling"
+})
+
+local radio = PlayersTab:CreateSection({
+	Name = "Radio",
+    Side = "Right"
 })
 
 -- visuals sections
@@ -323,6 +343,134 @@ FOV_Appearance:AddColorpicker({
 	end
 }).Default = Aimbot.FOVSettings.LockedColor
 
+-- player tab stuff
+
+_G.toggleforplayerstufflol = false
+
+
+
+playermods:AddToggle({
+	Name = "Toggle mods",
+	Callback = function(New, Old)
+		_G.toggleforplayerstufflol = New
+	end
+}).Default = false
+
+
+
+playermods:AddSlider({
+	Name = "Walkspeed",
+	Value = wspeed,
+	Callback = function(New, Old)
+
+    if _G.toggleforplayerstufflol then
+
+    while _G.toggleforplayerstufflol do wait(0.1)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = New
+    end
+
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+
+	end,
+	Min = 16,
+	Max = 26
+}).Default = 16
+
+playermods:AddSlider({
+	Name = "Jumppower",
+	Value = jpower,
+	Callback = function(New, Old)
+
+	if _G.toggleforplayerstufflol then
+
+    while _G.toggleforplayerstufflol do wait(0.1)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = New
+    end
+
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+
+	end,
+	Min = 50,
+	Max = 64
+}).Default = 50
+
+playermods:AddToggle({
+	Name = "Infinite jump",
+	Value = infjumptoggle,
+	Callback = function(New, Old)
+	if _G.toggleforplayerstufflol then
+		print(New)
+        else
+        print("NO!")
+    end
+
+	end
+}).Default = false
+
+-- trolling
+
+trolling:AddToggle({
+	Name = "Remove map borders",
+	Callback = function(New, Old)
+		print(New)
+	end
+}).Default = false
+
+-- radio
+
+_G.audio = 0
+_G.pitch = 1
+
+radio:AddTextbox({
+	Name = "AudioID",
+    Value = "ID here",
+	Callback = function(New, Old)
+		local audioid2 = tonumber(New)
+		if audioid2 then
+			_G.audio = audioid2
+			print("updated ".._G.audio)
+		else
+			print("thats not numbers bud: "..New)
+		end
+	end
+})
+
+radio:AddTextbox({
+	Name = "Audio Pitch",
+    Value = "1",
+	Callback = function(New, Old)
+		local pitch2 = tonumber(New)
+		if pitch2 then
+			_G.pitch = pitch2
+			print("updated ".._G.pitch)
+		else
+			print("thats not numbers bud: "..New)
+		end
+	end
+})
+
+radio:AddButton({
+	Name = "Play song",
+	Callback = function()
+		local args = {
+			[1] = {
+				[1] = _G.audio,
+				[2] = _G.pitch
+			}
+		}
+
+		game:GetService("ReplicatedStorage").GameEvents.Gameplay.PlayRadio:FireServer(unpack(args))
+	end
+})
+
+
+
+
+
 -- esp settings
 
 WallHackChecks:AddToggle({
@@ -350,6 +498,8 @@ WallHackChecks:AddToggle({
 }).Default = WallHack.Settings.AliveCheck
 
 -- visuals settings
+
+
 
 ESPSettings:AddToggle({
 	Name = "Enabled",
