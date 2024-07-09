@@ -1,6 +1,6 @@
 --[[
 
-                      > boboware by xyzzr Â© CC0 1.0 Universal (2024) <
+                      > boboware by xyzzr © CC0 1.0 Universal (2024) <
     > Licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License. <
 
 ]]
