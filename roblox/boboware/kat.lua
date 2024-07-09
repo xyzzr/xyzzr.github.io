@@ -5,14 +5,6 @@
 
 ]]
 
-local args = {
-    [1] = {
-        [1] = 0, -- the audio
-        [2] = 0 --  pitch for the audio
-    }
-}
-
-game:GetService("ReplicatedStorage").GameEvents.Gameplay.PlayRadio:FireServer(unpack(args))
 
 
 
@@ -353,40 +345,76 @@ FOV_Appearance:AddColorpicker({
 
 -- player tab stuff
 
+_G.toggleforplayerstufflol = false
+
+
+
+playermods:AddToggle({
+	Name = "Toggle mods",
+	Callback = function(New, Old)
+		_G.toggleforplayerstufflol = New
+	end
+}).Default = false
+
+
 
 playermods:AddSlider({
 	Name = "Walkspeed",
 	Value = wspeed,
 	Callback = function(New, Old)
-		print(New)
+
+    if _G.toggleforplayerstufflol then
+
+    while _G.toggleforplayerstufflol do wait(0.1)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = New
+    end
+
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+
 	end,
 	Min = 16,
-	Max = 50
+	Max = 26
 }).Default = 16
 
 playermods:AddSlider({
 	Name = "Jumppower",
 	Value = jpower,
 	Callback = function(New, Old)
-		print(New)
+
+	if _G.toggleforplayerstufflol then
+
+    while _G.toggleforplayerstufflol do wait(0.1)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = New
+    end
+
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+
 	end,
 	Min = 50,
-	Max = 100
+	Max = 64
 }).Default = 50
 
 playermods:AddToggle({
 	Name = "Infinite jump",
 	Value = infjumptoggle,
 	Callback = function(New, Old)
+	if _G.toggleforplayerstufflol then
 		print(New)
+        else
+        print("NO!")
+    end
+
 	end
 }).Default = false
 
 -- trolling
 
 trolling:AddToggle({
-	Name = "Kill all",
-	Value = infjumptoggle,
+	Name = "Remove map borders",
 	Callback = function(New, Old)
 		print(New)
 	end
