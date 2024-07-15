@@ -30,6 +30,9 @@ Added nude command (wow)
 6/25/2024: 5:32PM
 Fixed bald command
 Fixed fly
+
+7/15/2024 5:27PM
+Fixed bald command again 😥
 ]]
 
 loadstring(game:HttpGet("https://pastebin.com/raw/2GHL79gP"))() -- spys gonna get this!
