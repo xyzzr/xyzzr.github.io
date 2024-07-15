@@ -499,7 +499,7 @@ local Selector1 = Tab1:NewSelector("Select Command", "[]", {"bald", "kick", "kil
     -- print(d) -- debug thingie
 Notif:Notify("Ran command!", 4, "success")
 if d == "bald" then -- bald cmd
-    local players = getPlayer(_G.target.Text, Players.LocalPlayer)
+    local players = getPlayer(_G.target, Players.LocalPlayer)
     for i, v in pairs(players) do
         for i, v in pairs(Players[v].Character:GetChildren()) do
             if v:IsA("Accessory") then
