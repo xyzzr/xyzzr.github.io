@@ -35,7 +35,7 @@ Fixed fly
 Fixed bald command again 😥
 ]]
 
-loadstring(game:HttpGet("https://pastebin.com/raw/2GHL79gP"))() -- spys gonna get this!
+-- loadstring(game:HttpGet("https://pastebin.com/raw/2GHL79gP"))() -- spys gonna get this!
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xyzzr/libarys/main/xsyhfs.lua"))()
 local version = "1.5"
 local Wm = library:Watermark("Rice admin | v" .. version)
