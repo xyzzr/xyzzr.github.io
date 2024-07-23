@@ -58,10 +58,6 @@ local AimbotTab = MainFrame:CreateTab({
 	Name = "Aimbot"
 })
 
-local PlayersTab = MainFrame:CreateTab({
-	Name = "Player"
-})
-
 local VisualsTab = MainFrame:CreateTab({
 	Name = "Visuals"
 })
