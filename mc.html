@@ -8,7 +8,7 @@
 <style>
     body {
         background-color: black;
-            color: white;
+        color: white;
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
@@ -72,7 +72,7 @@
                 <li>Play normally.</li>
             </ul>
         </div>
-        <button class="button" onclick="acceptTOS()">Accept</button>
+        <button class="button" onclick="tos()">Accept</button>
     </div>
     <div class="container hidden" id="welcome-container">
         <div class="title">Welcome</div>
@@ -85,7 +85,7 @@
     </div>
 
     <script>
-        function acceptTOS() {
+        function tos() {
             const tosContainer = document.getElementById('tos-container');
             const welcomeContainer = document.getElementById('welcome-container');
             tosContainer.style.opacity = '0';
