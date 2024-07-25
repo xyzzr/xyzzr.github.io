@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #roomIDDisplay {
+            margin-bottom: 20px;
+        }
+        #roomInput, #createRoomBtn {
+            margin: 5px 0;
+        }
+        #chat {
+            display: none;
+            flex-direction: column;
+            width: 80%;
+            max-width: 500px;
+            height: 70%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        #newMessage {
+            display: flex;
+        }
+        #newMessage input {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        #newMessage button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="roomIDDisplay">RoomID: <span id="roomID"></span></div>
+    <input type="text" id="roomInput" placeholder="Enter Room ID">
+    <button id="createRoomBtn">Create Room</button>
+
+    <div id="chat">
+        <div id="roomHeader">RoomID: <span id="currentRoomID"></span></div>
+        <div id="messages"></div>
+        <div id="newMessage">
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button id="sendMessageBtn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function generateRoomID(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        const roomIDSpan = document.getElementById('roomID');
+        const roomInput = document.getElementById('roomInput');
+        const createRoomBtn = document.getElementById('createRoomBtn');
+        const chatDiv = document.getElementById('chat');
+        const currentRoomIDSpan = document.getElementById('currentRoomID');
+        const messagesDiv = document.getElementById('messages');
+        const messageInput = document.getElementById('messageInput');
+        const sendMessageBtn = document.getElementById('sendMessageBtn');
+
+        const roomID = generateRoomID(10);
+        roomIDSpan.textContent = roomID;
+        createRoomBtn.addEventListener('click', () => {
+            if (roomInput.value === roomID) {
+                enterChatRoom(roomID);
+            } else {
+                alert('Incorrect Room ID!');
+            }
+        });
+
+        function enterChatRoom(roomID) {
+            currentRoomIDSpan.textContent = roomID;
+            chatDiv.style.display = 'flex';
+            roomInput.style.display = 'none';
+            createRoomBtn.style.display = 'none';
+            document.getElementById('roomIDDisplay').style.display = 'none';
+        }
+
+
+        sendMessageBtn.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = message;
+                messagesDiv.appendChild(messageElement);
+                messageInput.value = '';
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
