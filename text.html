@@ -19,7 +19,7 @@
         #roomInput, #joinRoomBtn, #createRoomBtn, #revealRoomID, #usernamePrompt input, #newMessage button {
             margin: 5px 0;
             transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners */
         }
         #roomInput {
             padding: 5px;
@@ -30,8 +30,8 @@
         #joinRoomBtn, #createRoomBtn, #newMessage button {
             padding: 5px 10px;
             border: 1px solid #ccc;
-            background-color: #fff;
-            color: #000;
+            background-color: #fff; /* Match textbox background */
+            color: #000; /* Match textbox text color */
             cursor: pointer;
         }
         #revealRoomID {
@@ -42,7 +42,7 @@
             cursor: pointer;
             opacity: 0.7;
             transition: opacity 0.3s, background-color 0.3s, color 0.3s;
-            display: none;
+            display: none; /* Hide by default */
         }
         #revealRoomID:hover {
             opacity: 1;
@@ -72,10 +72,10 @@
         #newMessage input {
             flex-grow: 1;
             padding: 5px;
-            background-color: #fff;
-            color: #000;
+            background-color: #fff; /* Match textbox background */
+            color: #000; /* Match textbox text color */
             border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners */
         }
         #usernamePrompt {
             display: none;
@@ -92,10 +92,10 @@
         }
         #usernamePrompt input {
             margin: 5px 0;
-            background-color: #fff;
-            color: #000;
+            background-color: #fff; /* Match textbox background */
+            color: #000; /* Match textbox text color */
             border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners */
         }
         #usernamePrompt button {
             padding: 5px 10px;
@@ -103,7 +103,7 @@
             background-color: #fff;
             color: #000;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners */
         }
         .dark-mode {
             background-color: #111;
@@ -112,20 +112,20 @@
         .dark-mode #roomInput, 
         .dark-mode #usernamePrompt input, 
         .dark-mode #newMessage input {
-            background-color: #333;
-            color: #eee;
+            background-color: #333; /* Match textbox background in dark mode */
+            color: #eee; /* Match textbox text color in dark mode */
             border: 1px solid #555;
         }
         .dark-mode #joinRoomBtn, 
         .dark-mode #createRoomBtn, 
         .dark-mode #newMessage button {
-            background-color: #333;
-            color: #eee;
+            background-color: #333; /* Match textbox background in dark mode */
+            color: #eee; /* Match textbox text color in dark mode */
             border: 1px solid #555;
         }
         .dark-mode #revealRoomID {
             background-color: #444;
-            color: #ccc;
+            color: #ccc; /* Adjusted color for better visibility */
             opacity: 0.7;
         }
         .dark-mode #revealRoomID:hover {
@@ -141,15 +141,15 @@
             color: #eee;
         }
         .dark-mode #usernamePrompt button {
-            background-color: #333;
-            color: #eee;
+            background-color: #333; /* Button background in dark mode */
+            color: #eee; /* Button text color in dark mode */
             border: 1px solid #555;
         }
         .dark-mode #currentRoomID.hidden-id {
-            color: #aaa;
+            color: #aaa; /* Lighter gray for hidden ID in dark mode */
         }
         .dark-mode #currentRoomID.revealed-id {
-            color: #fff;
+            color: #fff; /* White color for revealed ID in dark mode */
         }
         #darkModeToggle {
             position: absolute;
@@ -157,15 +157,15 @@
             right: 10px;
             padding: 5px 10px;
             border: none;
-            border-radius: 8px;
+            border-radius: 8px; /* Rounded corners */
             cursor: pointer;
         }
-
+        /* Light mode button style */
         #darkModeToggle {
             background: #222;
             color: #eee;
         }
-
+        /* Dark mode button style */
         .dark-mode #darkModeToggle {
             background: #eee;
             color: #222;
@@ -207,16 +207,11 @@
     </div>
 
     <script>
-        function generateRoomID(length) {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-            for (let i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-            return result;
-        }
+        const ws = new WebSocket('ws://localhost:8080');
+        let username = '';
+        let currentRoomID = '';
+        let idRevealed = false;
 
-        const existingRooms = new Set();
         const roomInput = document.getElementById('roomInput');
         const joinRoomBtn = document.getElementById('joinRoomBtn');
         const createRoomBtn = document.getElementById('createRoomBtn');
@@ -231,53 +226,34 @@
         const messagesDiv = document.getElementById('messages');
         const messageInput = document.getElementById('messageInput');
         const sendMessageBtn = document.getElementById('sendMessageBtn');
-        let username = '';
-        let currentRoomID = '';
-        let idRevealed = false;
 
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                darkModeToggle.textContent = 'Light Mode';
-            } else {
-                darkModeToggle.textContent = 'Dark Mode';
-            }
+            darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         });
 
         joinRoomBtn.addEventListener('click', () => {
             const roomID = roomInput.value.trim();
-            if (existingRooms.has(roomID)) {
-                showUsernamePrompt(roomID);
-            } else {
-                alert('Room ID does not exist!');
+            if (roomID) {
+                ws.send(JSON.stringify({ type: 'join', roomID, username }));
             }
         });
 
         createRoomBtn.addEventListener('click', () => {
-            let roomID;
-            do {
-                roomID = generateRoomID(10);
-            } while (existingRooms.has(roomID));
-            existingRooms.add(roomID);
-            currentRoomID = roomID;
-            revealRoomIDBtn.style.display = 'block';
-            showUsernamePrompt(roomID);
+            const roomID = generateRoomID(10);
+            ws.send(JSON.stringify({ type: 'create', roomID }));
         });
 
-        function showUsernamePrompt(roomID) {
-            overlay.style.display = 'block';
-            usernamePrompt.style.display = 'block';
-            enterRoomBtn.onclick = () => {
-                username = usernameInput.value.trim();
-                if (username) {
-                    enterChatRoom(roomID);
-                } else {
-                    alert('Please enter a username');
-                }
-            };
-        }
+        enterRoomBtn.addEventListener('click', () => {
+            username = usernameInput.value.trim();
+            if (username) {
+                enterChatRoom();
+            } else {
+                alert('Please enter a username');
+            }
+        });
 
-        function enterChatRoom(roomID) {
+        function enterChatRoom() {
             overlay.style.display = 'none';
             usernamePrompt.style.display = 'none';
             currentRoomIDSpan.textContent = '****';
@@ -291,14 +267,10 @@
         sendMessageBtn.addEventListener('click', () => {
             const message = messageInput.value.trim();
             if (message) {
-                const messageElement = document.createElement('div');
-                messageElement.textContent = `<${username}>: ${message}`;
-                messagesDiv.appendChild(messageElement);
+                ws.send(JSON.stringify({ type: 'message', roomID: currentRoomID, username, message }));
                 messageInput.value = '';
-                messagesDiv.scrollTop = messagesDiv.scrollHeight;
             }
         });
-
 
         messageInput.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
@@ -308,15 +280,44 @@
         });
 
         revealRoomIDBtn.addEventListener('click', () => {
-            if (idRevealed) {
-                currentRoomIDSpan.textContent = '****';
-                currentRoomIDSpan.classList.replace('revealed-id', 'hidden-id');
-            } else {
-                currentRoomIDSpan.textContent = currentRoomID;
-                currentRoomIDSpan.classList.replace('hidden-id', 'revealed-id');
-            }
+            ws.send(JSON.stringify({ type: 'revealRoomID', roomID: currentRoomID, revealed: !idRevealed }));
             idRevealed = !idRevealed;
         });
+
+        ws.onmessage = (event) => {
+            const msg = JSON.parse(event.data);
+
+            switch (msg.type) {
+                case 'join':
+                    messagesDiv.innerHTML += `<div><i>${msg.username} joined the room</i></div>`;
+                    break;
+                case 'message':
+                    messagesDiv.innerHTML += `<div><${msg.username}>: ${msg.message}</div>`;
+                    break;
+                case 'create':
+                    currentRoomID = msg.roomID;
+                    currentRoomIDSpan.textContent = '****';
+                    break;
+                case 'revealRoomID':
+                    currentRoomIDSpan.textContent = msg.revealed ? currentRoomID : '****';
+                    currentRoomIDSpan.classList.toggle('revealed-id', msg.revealed);
+                    currentRoomIDSpan.classList.toggle('hidden-id', !msg.revealed);
+                    break;
+                case 'error':
+                    alert(msg.message);
+                    break;
+            }
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        };
+
+        function generateRoomID(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
     </script>
 </body>
 </html>
