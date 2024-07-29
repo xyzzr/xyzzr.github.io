@@ -70,16 +70,16 @@ body.light-theme textarea {
 }
 
 a {
-    color: gray; /* Keep the same color */
+    color: gray;
     text-decoration: none;
-    position: relative; /* Needed for the pseudo-element */
-    overflow: hidden; /* Ensure the pseudo-element stays within the link */
+    position: relative;
+    overflow: hidden;
 }
 
 a img {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    vertical-align: middle; /* Align with the middle of text */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 a::after {
