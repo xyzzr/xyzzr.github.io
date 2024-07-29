@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: transparent;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 span {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(270deg, #00bfff, #1e90ff, #00bfff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+input, textarea {
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+#output {
+    height: 300px;
+    white-space: pre-wrap;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: grey;
+}
+
+body.light-theme { /* light theme */
+    background-color: white;
+    color: black;
+}
+
+body.light-theme input, 
+body.light-theme textarea {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+a {
+    color: gray; /* Keep the same color */
+    text-decoration: none;
+    position: relative; /* Needed for the pseudo-element */
+    overflow: hidden; /* Ensure the pseudo-element stays within the link */
+}
+
+a img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    vertical-align: middle; /* Align with the middle of text */
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2.9px;
+    height: 2px;
+    width: 100%;
+    background-color: #1e90ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
