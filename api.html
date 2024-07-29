@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RBXL Ban API</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 span {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(270deg, #00bfff, #1e90ff, #00bfff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+input, textarea {
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+#output {
+    height: 300px;
+    white-space: pre-wrap;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+}
+.info small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: grey;
+}
+        
+body.light-theme { /* light theme */
+    background-color: white;
+    color: black;
+}
+body.light-theme input, 
+body.light-theme textarea {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+</style>
+    
+
+</head>
+<body class="light-theme">
+<div class="container">
+
+<h1>
+    <span>RBXL Ban API</span>
+</h1>
+        
+<input type="text" id="username" placeholder="Enter your username here">
+    <textarea id="output" readonly placeholder="API output appears here!"></textarea>
+    
+<div class="info">
+    <strong>Info</strong>
+    <small>If the textbox is <strong>empty</strong> or shows <strong>Error: Failed to fetch</strong> on the results textbox, it means you aren't banned lol! (or part of the next banwave/about to get banned.) It means your account <strong>should</strong> be completely safe!</small>
+    <small><strong>discord.gg/97zJy2V9R7</strong></small>
+    </div>
+</div>
+
+
+
+<script>
+let debounceTimeout;
+
+async function fetchInfo(username) {
+    const output = document.getElementById('output');
+        if (username === '') {
+            output.value = '';
+            return;
+    }
+
+try {
+    const response = await fetch('https://usermoderation.roblox.com/v1/not-approved', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ username })
+});
+
+if (!response.ok) {
+throw new Error('Network response was not ok ' + response.statusText);
+}
+
+const data = await response.json();
+    output.value = JSON.stringify(data, null, 2);
+} catch (error) {
+    output.value = 'Error: ' + error.message;
+    }
+}
+
+document.getElementById('username').addEventListener('input', function() {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+    fetchInfo(this.value);
+}, 500);  // so roblox dosent get mad & blacklist u (we wouldnt want that!)
+});
+
+
+document.getElementById('username').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent form submission if inside a form
+    fetchInfo(this.value);
+    }
+});
+
+</script>
+
+</body>
+</html>
