@@ -17,9 +17,12 @@
             $('body').terminal({
 
                 help: function() {
-                    this.echo('Available commands:\n- help: Displays this list of commands\n- discord: Tries to find Discord invite link\n- download: downloads the latest resourcepack');
+                    this.echo('Available commands:\n- help: Displays this list of commands\n- discord: Tries to find Discord invite link\n- download: downloads the latest resourcepack\n- version: tells current version & last version');
                 },
-                
+
+                version: function() {
+                    this.echo('Current version: 1.523B\n-Last version: 1.435B');
+                },
 
                 discord: function() {
                     this.echo('Whoops! No discord server found.');
