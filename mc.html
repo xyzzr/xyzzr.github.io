@@ -1,17 +1,16 @@
 
-<!DOCTYPE html>
-<html>
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Resourcepack updater">
-  <meta property="og:description" content="Resourcepack updater, Commands: help, discord, download and version">
-<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+ <meta charset="UTF-8">
+  <title>Resourcepack updater</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Resourcepack updater">
+    <meta property="og:description" content="Resourcepack updater, Commands: help, discord, download and version">
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
   
-<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
 </head>
+
 
 <body>
     <script>
@@ -19,25 +18,27 @@
             $('body').terminal({
 
                 help: function() {
-                    this.echo('This resourcepack is for version 1.20.6\nAvailable commands:\n- help: Displays this list of commands\n- discord: Tries to find Discord invite link\n- download: downloads the latest resourcepack\n- version: tells current version & last version');
+                    this.echo('Available commands:\n help: Displays this list of commands\n discord: Tries to find Discord invite link\n download: Downloads the latest resourcepack\n info: Tells information about the resourcepack\n tutorial: Teaches you how to install the resourcepack if you dont know how to');
                 },
 
-                version: function() {
-                    this.echo('Current version: 1.523B\nLast version: 1.435B');
+                info: function() {
+                    this.echo(' Current version: 1.553B\n Last version: 1.523B\n For minecraft version 1.20.6');
                 },
 
                 discord: function() {
-                    this.echo('Whoops! No discord server found.');
+                    this.echo(' Whoops! No discord server found.');
                 },
                 
-  
+                tutorial: function() {
+                    this.echo('Tutorial for installing the resourcpack\n 1. Click windows key + R and type this in "%appdata%" \n 2. find the .minecraft folder \n 3.open the folder & open resourcepacks folder\n 4. drag the zip file you downloaded from here to the folder\n 5. enable the resourcepack in minecraft by going to options and resourcepacks!\n(If this didint work search up a tutorial on youtube)');
+                },
+              
                 download: function() {
-                    this.echo('Click here to download the latest Resourcepack: https://xyzzr.github.io/Cia%27s%20pack.rar');
+                    this.echo(' Click here to download the latest Resourcepack: https://xyzzr.github.io/Cia%27s%20pack.rar');
                 }
             }, {
-                greetings: 'Resourcepack updater Console (run help to get started)'
+                greetings: 'Resourcepack updater [Version 1.553B]\n(c) Retards Incorporation. All rights reserved.\nType "help" to get started!'
             });
         });
     </script>
 </body>
-</html>
