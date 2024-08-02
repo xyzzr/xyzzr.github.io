@@ -18,11 +18,11 @@
             $('body').terminal({
 
                 help: function() {
-                    this.echo('Available commands:\n help: Displays this list of commands\n discord: Tries to find Discord invite link\n download: Downloads the latest resourcepack\n info: Tells information about the resourcepack\n tutorial: Teaches you how to install the resourcepack if you dont know how to');
+                    this.echo('Available commands:\n help: Displays this list of commands\n discord: Tries to find Discord invite link\n download: Downloads the latest resourcepack\n info: Tells information about the resourcepack\n tutorial: Teaches you how to install the resourcepack if you dont know how to\n features: Tells you current resourcepack features\n changelog: Shows the changelog');
                 },
 
                 info: function() {
-                    this.echo(' Current version: 1.553B\n Last version: 1.523B\n For minecraft version 1.20.6');
+                    this.echo(' Current version: 1.553B\n Last version: 1.523B\n For minecraft version 1.20.6\n Last updated: 8/2/2024');
                 },
 
                 discord: function() {
@@ -32,12 +32,20 @@
                 tutorial: function() {
                     this.echo('Tutorial for installing the resourcpack\n 1. Click windows key + R and type this in "%appdata%" \n 2. find the .minecraft folder \n 3.open the folder & open resourcepacks folder\n 4. drag the zip file you downloaded from here to the folder\n 5. enable the resourcepack in minecraft by going to options and resourcepacks!\n(If this didint work search up a tutorial on youtube)');
                 },
-              
+             
+                features: function() {
+                    this.echo('Current features\n Custom disc sounds/songs\n Custom loading menu\n Custom totem\n Dark mode ui');
+                },
+
+                changelog: function() {
+                    this.echo('8/2/2024 [RECENT]\n Added more custom disc sounds\n7/2/2024\n Added custom disc sounds\n Added custom totem\n Added dark mode');
+                },
+             
                 download: function() {
                     this.echo(' Click here to download the latest Resourcepack: https://xyzzr.github.io/Cia%27s%20pack.rar');
                 }
             }, {
-                greetings: 'Resourcepack updater [Version 1.553B]\n(c) Retards Incorporation. All rights reserved.\nType "help" to get started!'
+                greetings: 'Resourcepack updater [Website version 1.9]\n(c) Retards Incorporation. All rights reserved.\nType "help" to get started!'
             });
         });
     </script>
