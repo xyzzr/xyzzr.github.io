@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Resourcepack updater">
+    <meta property="og:description" content="Resourcepack updater">
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+
+<body>
+    <script>
+        $(function() {
+            $('body').terminal({
+
+                help: function() {
+                    this.echo('Available commands:\n- help: Displays this list of commands\n- discord: Opens our Discord invite link\n- download: downloads the latest celeryapp');
+                },
+                
+
+                discord: function() {
+                    this.echo('Whoops! No discord server found.');
+                },
+                
+  
+                download: function() {
+                    this.echo('Click here to download the latest Resourcepack:  https://xyzzr.github.io/Cia%27s%20pack.rar');
+                }
+            }, {
+                greetings: 'Resourcepack updater Console (run help to get started)'
+            });
+        });
+    </script>
+</body>
+</html>
