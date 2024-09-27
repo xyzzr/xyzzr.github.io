@@ -4,7 +4,7 @@ local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSys
 local instance = (_G.chatSpyInstance or 0) + 1
 _G.chatSpyInstance = instance
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://xyzzr.github.io/roblox/ML/library.lua'))()
 local Window = Rayfield:CreateWindow({
     Name = "Message Logger | V1.2",
     LoadingTitle = "Message Logger",
