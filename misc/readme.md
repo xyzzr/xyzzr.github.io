@@ -10,8 +10,7 @@
 
 
 ## Bingus
-<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (unedited)" width="250" height="250">
-<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (edited)" width="250" height="250">
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (unedited)" width="250" height="250"> <img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (edited)" width="250" height="250">
 
 ## David
 <img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/justdavid2.png?raw=true" alt="David's old PFP" width="250" height="250">
