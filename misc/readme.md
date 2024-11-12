@@ -10,15 +10,16 @@
 
 
 ## Bingus
-![hitler (unedited)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true)
-![hitler (edited)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true)
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (unedited)" width="250" height="250">
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true" alt="hitler (edited)" width="250" height="250">
 
 ## David
-![David's old PFP](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/justdavid2.png?raw=true)
-![David's face](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/developer_davidd.png?raw=true)
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/justdavid2.png?raw=true" alt="David's old PFP" width="250" height="250">
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/developer_davidd.png?raw=true" alt="David's face" width="250" height="250">
 
 ## Hannah
-![Hannah's face (2024)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hannah.png?raw=true)
-![Hannah's face (2022-2023)](https://github.com/xyzzr/xyzzr.github.io/raw/refs/heads/main/misc/hannah2023-2022jpg?raw=true)
-![Hannah's face (2022)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hannah2022.jpg?raw=true)
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hannah.png?raw=true" alt="Hannah's face (2024)" width="250" height="250">
+<img src="https://github.com/xyzzr/xyzzr.github.io/raw/refs/heads/main/misc/hannah2023-2022jpg?raw=true" alt="Hannah's face (2022-2023)" width="250" height="250">
+<img src="https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hannah2022.jpg?raw=true" alt="Hannah's face (2022)" width="250" height="250">
+
 
