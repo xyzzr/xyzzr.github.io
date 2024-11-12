@@ -11,7 +11,7 @@
 
 **Bingus:**
 [hitler (unedited)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true)
-[hitler (edited)][(https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler.png?raw=true))
+[hitler (edited)](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/hitler_unedited.png?raw=true)
 
 **David:**
 [David's old PFP](https://github.com/xyzzr/xyzzr.github.io/blob/main/misc/justdavid2.png?raw=true)
