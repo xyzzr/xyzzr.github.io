@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuaU Obfuscator</title>
+    <title>LuaU Obfuscator with Ironbrew-like Features</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         textarea { width: 100%; height: 100px; margin-top: 10px; }
@@ -11,38 +11,36 @@
     </style>
 </head>
 <body>
-    <h1>Client-Side LuaU Obfuscator</h1>
+    <h1>Client-Side LuaU Obfuscator (Ironbrew-like)</h1>
     <label for="inputCode">Enter LuaU Code:</label>
     <textarea id="inputCode" placeholder="Enter your LuaU code here..."></textarea>
     <button onclick="obfuscateCode()">Obfuscate</button>
     <label for="outputCode">Obfuscated Code (for Executors):</label>
     <textarea id="outputCode" readonly></textarea>
-    
     <label for="decodedCode">Decoded LuaU Code:</label>
     <textarea id="decodedCode" readonly></textarea>
-    
     <button onclick="decodeCode()">Decode</button>
 
     <script>
         function obfuscateCode() {
             const inputCode = document.getElementById("inputCode").value;
             let obfuscatedCode = "";
-            for (let i = 0; i < inputCode.length; i++) {
-                const charCode = inputCode.charCodeAt(i);
-                obfuscatedCode += String.fromCharCode(charCode + 3);
-            }
+            const variableNames = inputCode.replace(/local (\w+)/g, 'local __RANDOM_VAR__$1');
+            const obfuscatedStrings = variableNames.replace(/"([^"]*)"/g, function(_, str) {
+                return '"' + Buffer.from(str).toString('base64') + '"';
+            });
+            obfuscatedCode = obfuscatedStrings;
 
             document.getElementById("outputCode").value = obfuscatedCode;
-            document.getElementById("decodedCode").value = inputCode; 
+            document.getElementById("decodedCode").value = inputCode;
         }
-
         function decodeCode() {
             const obfuscatedCode = document.getElementById("outputCode").value;
-            let decodedCode = "";
-            for (let i = 0; i < obfuscatedCode.length; i++) {
-                const charCode = obfuscatedCode.charCodeAt(i);
-                decodedCode += String.fromCharCode(charCode - 3);
-            }
+            let decodedCode = obfuscatedCode;
+            decodedCode = decodedCode.replace(/"([A-Za-z0-9+/=]+)"/g, function(_, base64Str) {
+                return '"' + atob(base64Str) + '"'; 
+            });
+            decodedCode = decodedCode.replace(/local __RANDOM_VAR__([\w]+)/g, 'local $1');
 
             document.getElementById("decodedCode").value = decodedCode;
         }
