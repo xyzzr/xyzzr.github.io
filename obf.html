@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <titlef</title>
+    <title>LuaU Obfuscator</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         textarea { width: 100%; height: 100px; margin-top: 10px; }
@@ -11,11 +11,18 @@
     </style>
 </head>
 <body>
+    <h1>Client-Side LuaU Obfuscator</h1>
     <label for="inputCode">Enter LuaU Code:</label>
     <textarea id="inputCode" placeholder="Enter your LuaU code here..."></textarea>
     <button onclick="obfuscateCode()">Obfuscate</button>
-    <label for="outputCode">Obfuscated Code:</label>
+    <label for="outputCode">Obfuscated Code (for Executors):</label>
     <textarea id="outputCode" readonly></textarea>
+    
+    <label for="decodedCode">Decoded LuaU Code:</label>
+    <textarea id="decodedCode" readonly></textarea>
+    
+    <button onclick="decodeCode()">Decode</button>
+
     <script>
         function obfuscateCode() {
             const inputCode = document.getElementById("inputCode").value;
@@ -24,7 +31,20 @@
                 const charCode = inputCode.charCodeAt(i);
                 obfuscatedCode += String.fromCharCode(charCode + 3);
             }
+
             document.getElementById("outputCode").value = obfuscatedCode;
+            document.getElementById("decodedCode").value = inputCode; 
+        }
+
+        function decodeCode() {
+            const obfuscatedCode = document.getElementById("outputCode").value;
+            let decodedCode = "";
+            for (let i = 0; i < obfuscatedCode.length; i++) {
+                const charCode = obfuscatedCode.charCodeAt(i);
+                decodedCode += String.fromCharCode(charCode - 3);
+            }
+
+            document.getElementById("decodedCode").value = decodedCode;
         }
     </script>
 </body>
