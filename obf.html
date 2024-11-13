@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titlef</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 100px; margin-top: 10px; }
+        button { margin: 10px 0; padding: 10px; }
+    </style>
+</head>
+<body>
+    <label for="inputCode">Enter LuaU Code:</label>
+    <textarea id="inputCode" placeholder="Enter your LuaU code here..."></textarea>
+    <button onclick="obfuscateCode()">Obfuscate</button>
+    <label for="outputCode">Obfuscated Code:</label>
+    <textarea id="outputCode" readonly></textarea>
+    <script>
+        function obfuscateCode() {
+            const inputCode = document.getElementById("inputCode").value;
+            let obfuscatedCode = "";
+            for (let i = 0; i < inputCode.length; i++) {
+                const charCode = inputCode.charCodeAt(i);
+                obfuscatedCode += String.fromCharCode(charCode + 3);
+            }
+            document.getElementById("outputCode").value = obfuscatedCode;
+        }
+    </script>
+</body>
+</html>
