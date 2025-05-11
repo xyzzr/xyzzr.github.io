@@ -1,123 +1,9 @@
 <!DOCTYPE html>
-<script>
-    console.log("Lookup Version 2.1B , Made by xyzzr");
-</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-        const titles = [
-            "X",
-            "Xy",
-            "Xyz",
-            "Xyzz",
-            "Xyzzr",
-            "Xyzzr - ",
-            "Xyzzr - L",
-            "Xyzzr - Lo",
-            "Xyzzr - Loo",
-            "Xyzzr - Look",
-            "Xyzzr - Looku",
-            "Xyzzr - Lookup",
-            "Xyzzr - Lookup",
-            "Xyzzr - Looku",
-            "Xyzzr - Look",
-            "Xyzzr - Loo",
-            "Xyzzr - Lo",
-            "Xyzzr - L",
-            "Xyzzr - ",
-            "Xyzzr",
-            "Xyzz",
-            "Xyz",
-            "Xy",
-            "X"
-        ];
-
-        let index = 0;
-        function updatetitle() {
-            document.title = titles[index];
-            index = (index + 1) % titles.length;
-            setTimeout(updatetitle, 500);
-        }
-        updatetitle();
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            color: #000;
-        }
-        button {
-            display: none;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .version {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #888;
-            font-size: 12px;
-        }
-        .container.light-mode {
-            background-color: #fff;
-            color: #000;
-        }
-        .container.light-mode input[type="text"] {
-            background-color: #fff;
-        }
-        .container.light-mode button {
-            background-color: #007bff;
-            color: #fff;
-        }
-        .container.light-mode button:hover {
-            background-color: #0056b3;
-        }
-
-        .container.night-mode {
-            background-color: #000;
-            color: #fff;
-        }
-        .container.night-mode input[type="text"] {
-            background-color: #000;
-            color: #fff;
-        }
-        .container.night-mode button {
-            background-color: #333;
-            color: #fff;
-        }
-        .container.night-mode button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <style> body{font-family:Arial,sans-serif;background-color:#f0f0f0}.container{max-width:500px;margin:0 auto;padding:20px;border:1px solid #ccc;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,.1);display:flex;flex-direction:column;align-items:center;position:relative}input[type=text]{width:100%;padding:10px;margin-bottom:10px;border:1px solid #ccc;border-radius:5px;color:#000}button{display:none;padding:10px 20px;background-color:#007bff;color:#fff;border:none;border-radius:5px;cursor:pointer;margin-top:10px}.container.light-mode button:hover,.container.night-mode button:hover,button:hover{background-color:#0056b3}.container.light-mode,.container.light-mode input[type=text]{background-color:#fff}.version{position:absolute;top:10px;right:10px;color:#888;font-size:12px}.container.light-mode{color:#000}.container.light-mode button{background-color:#007bff;color:#fff}.container.night-mode,.container.night-mode input[type=text]{background-color:#000;color:#fff}.container.night-mode button{background-color:#333;color:#fff} </style>
 </head>
 <body class="light-mode">
     <div class="container" id="container">
@@ -125,7 +11,7 @@
         <input type="text" id="ipInput" placeholder="Enter IP Address" oninput="lookupip()">
         <div id="result"></div>
         <span class="version">v2.1B</span>
-        <button id="copyButton" onclick="copyLookup()" style="display: none;">Copy Lookup</button>
+        <button id="copyButton" onclick="copyyyy()" style="display: none;">Copy Lookup</button>
     </div>
     <script>
         function lookupip() {
@@ -179,7 +65,7 @@
             });
         }
 
-        function copyLookup() {
+        function copyyyy() {
             var lookupText = document.getElementById('result').innerText;
             navigator.clipboard.writeText(lookupText)
             .then(() => {
